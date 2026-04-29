@@ -20,12 +20,14 @@ Returns an array of compact product objects.
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the product. |
-| `title` | String | Name of the product. |
-| `fgId` | Integer | Fulfillment Group ID. |
-| `price` | Float | Base price of the product. |
-| `eventPrice` | Float | Price applicable for the current event. |
-| `isActive` | Boolean | Whether the product is available. |
-| `modGroups` | Array | List of modifier groups (compact version). |
+| `title` | String | Public name of the product. |
+| `fgId` | Integer | Fulfillment Group ID (e.g., KITCHEN=1, BAR=2). |
+| `price` | Float | Standard base price. |
+| `eventPrice`| Float | Current price for the active event context. |
+| `isActive` | Boolean | Whether the product is currently active. |
+| `modifyDate` | String | Timestamp of the last configuration change. |
+| `upc` | String | Barcode/UPC for the item. |
+| `modGroups` | Array | List of simplified modifier group objects. |
 
 ### Compact Modifier Group
 
@@ -48,23 +50,29 @@ Returns an array of compact product objects.
 ```json
 [
     {
-        "id": 1001,
-        "title": "Example Item",
-        "fgId": 50,
-        "price": 10.0,
-        "eventPrice": 10.0,
-        "isActive": true,
-        "modGroups": [
-            {
-                "id": 201,
-                "title": "Options",
-                "mods": [
-                    { "id": 301, "title": "Option A", "priceDiff": 2.0 },
-                    { "id": 302, "title": "Option B", "priceDiff": 0.0 }
-                ]
-            }
-        ]
-    }
+    "id": 1001,
+    "title": "Example Small Product",
+    "fgId": 501,
+    "price": 10.0,
+    "eventPrice": 12.0,
+    "modifyDate": "2026-04-29 12:00:00",
+    "isActive": true,
+    "upc": "123456789",
+    "modGroups": [
+        {
+            "id": 201,
+            "title": "Add-Ons",
+            "mods": [
+                {
+                    "id": 3001,
+                    "title": "Extra Cheese",
+                    "priceDiff": 1.50,
+                    "isActive": true
+                }
+            ]
+        }
+    ]
+}
 ]
 ```
 

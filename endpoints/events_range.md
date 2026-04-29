@@ -21,30 +21,21 @@ Returns an array of event objects. The structure is identical to the [Current Ev
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the event. |
-| `title` | String | Name of the event. |
-| `startDate` | String | Scheduled start time. |
-| `isCurrent` | Boolean | Whether the event is currently active. |
-| `eventType` | Object | Metadata about the event category. |
+| `title` | String | Public name of the event. |
+| `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |
+| `endDate` | String | Scheduled end time. |
+| `orderingStartDate`| String | When customers can begin placing orders. |
+| `lastCallDate` | String | When ordering will be disabled. |
+| `isLastCall` | Boolean | Whether the event is currently in the "Last Call" period. |
+| `isCurrent` | Boolean | Whether this is the active/live event at the venue. |
+| `taxExempt` | Boolean | Whether sales for this event are tax-exempt. |
+| `eventType` | Object | Category/Pricing configuration for the event. |
 
 ## Example Response (Sanitized)
 
 ```json
 [
     {
-        "id": 10001,
-        "title": "Example Event A",
-        "startDate": "04/25/2026 7:00 PM",
-        "isCurrent": false,
-        "eventType": {
-            "id": 5,
-            "title": "EXAMPLE_CATEGORY_A",
-            "priceLevelId": 10
-        }
-    },
-    {
-        "id": 10002,
-        "title": "Example Event B",
-        "startDate": "04/27/2026 8:00 PM",
         "isCurrent": false,
         "eventType": {
             "id": 6,

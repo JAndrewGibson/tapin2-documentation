@@ -2,7 +2,7 @@
 
 This repository serves as the primary, complete source of documentation for the Tapin2 API, verified against live sandbox responses.
 
-![Progress](https://img.shields.io/badge/Documentation_Progress-47%25-blue)
+![Progress](https://img.shields.io/badge/Documentation_Progress-79%25-blue)
 
 ## Endpoint Registry
 
@@ -13,9 +13,9 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
-| GET | [`v2/venues/{venueId}/locations/{locationId}/categories`](endpoints/categories.md) | 📝 Planned |
+| GET | [`v2/venues/{venueId}/locations/{locationId}/categories`](endpoints/categories.md) | ✅ Documented |
 | POST | [`{version}/Category`](endpoints/category_post.md) | 📝 Planned |
-| GET | [`{version}/Category`](endpoints/category_get.md) | 📝 Planned |
+| GET | [`{version}/Category`](endpoints/category_get.md) | ✅ Documented |
 
 </details>
 
@@ -47,7 +47,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted.md) | ✅ Documented |
-| GET | [`v1/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted_v1.md) | 📝 Planned |
+| GET | [`v1/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted_v1.md) | ✅ Documented |
 | POST | [`v2/cart/add`](endpoints/cart_add.md) | 📝 Planned |
 | POST | [`v2/cart/remove`](endpoints/cart_remove.md) | 📝 Planned |
 | POST | [`v2/cart/updatequantity`](endpoints/cart_update_quantity.md) | 📝 Planned |
@@ -66,7 +66,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | GET | [`v2/venues/{venueId}/products/{productId}/status`](endpoints/product_status.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/locations/{locationId}/products`](endpoints/location_products.md) | ✅ Documented |
 | GET | [`v4/venues/{venueId}/locations/{locationId}/products/small`](endpoints/products_small.md) | ✅ Documented |
-| GET | [`v2/venues/{venueId}/events/{eventId}/products`](endpoints/products_event.md) | 📝 Planned |
+| GET | [`v2/venues/{venueId}/events/{eventId}/products`](endpoints/products_event.md) | ✅ Documented |
 
 </details>
 
@@ -79,7 +79,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | GET | [`v2/venues/{venueId}/discounts`](endpoints/venue_discounts.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/translations`](endpoints/venue_translations.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/content`](endpoints/venue_content.md) | ✅ Documented |
-| GET | [`v2/venuegroups/{groupId}/venueids`](endpoints/venue_group_ids.md) | 📝 Planned |
+| GET | [`v2/venuegroups/{groupId}/venueids`](endpoints/venue_groups.md) | ✅ Documented |
 
 </details>
 
@@ -89,21 +89,25 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | Category | Method | Endpoint | Status |
 | :--- | :--- | :--- | :--- |
 | **Seat** | GET | [`v2/venues/{venueId}/events/{eventId}/sections`](endpoints/venue_sections.md) | ✅ Documented |
-| **User** | GET | [`v4/venues/{venueId}/users/pin/{pin}`](endpoints/user_by_pin.md) | 📝 Planned |
-| **Report** | GET | [`v1/venues/{venueId}/reports/{reportType}/{fromDate}/{toDate}`](endpoints/reports_v1.md) | 📝 Planned |
+| **User** | GET | [`v4/venues/{venueId}/users/pin/{pin}`](endpoints/user_by_pin.md) | ✅ Documented |
+| **Report** | GET | [`v1/venues/{venueId}/reports/{reportType}/{fromDate}/{toDate}`](endpoints/reports_v1.md) | ✅ Documented |
 | **Error** | POST | [`v2/venues/{venueId}/error`](endpoints/error_report.md) | 📝 Planned |
-| **Print** | GET | [`v3/venues/{venueId}/locations/{locationId}/print`](endpoints/location_print_queue.md) | 📝 Planned |
-| **Tab** | GET | [`v2/venues/{venueId}/tabs/unprinted`](endpoints/tabs_unprinted.md) | 📝 Planned |
-| **Tab2** | GET | [`v4/venues/{venueId}/tabs/{tabId}`](endpoints/tab_details_v4.md) | 📝 Planned |
+| **Print** | GET | [`v3/venues/{venueId}/locations/{locationId}/print`](endpoints/location_print_queue.md) | ✅ Documented |
+| **Tab** | GET | [`v2/venues/{venueId}/tabs/unprinted`](endpoints/tabs_unprinted.md) | ✅ Documented |
+| **Tab2** | GET | [`v4/venues/{venueId}/tabs/{tabId}`](endpoints/tab_details_v4.md) | ✅ Documented |
 
 </details>
 
 ## Known Deficiencies & Limitations
 
-- **Translations (`v2/venues/{venueId}/translations`)**: Currently returns an empty object `{}` for all tested venues. The mechanism for populating these strings is currently unverified.
+The following endpoints are currently documented but known to return errors or empty responses in the sandbox environment:
+
+- **v1/venues/{venueId}/reports**: Returns `500 Internal Server Error`. This legacy reporting system appears to be deprecated in favor of the Management Console's export features.
+- **v2/venues/{venueId}/tabs/unprinted**: Returns `404 Not Found`. Unprinted activity is likely handled via the standard order fulfillment endpoints.
+- **v2/venuegroups/{groupId}/venueids**: Returns `404 Not Found`. This endpoint may require specific venue group permissions or is inactive in the sandbox.
+- **v2/venues/{venueId}/orders/unprinted**: Returns `[]` unless active, unprinted orders exist in the current event context.
 - **Suite-based Event Data**: Current event calls for suite-based venues frequently return `null` outside of specific preorder windows.
-- **Unprinted Orders (`v2/venues/{venueId}/orders/unprinted`)**: Frequently returns an empty array `[]` in sandboxes. Verification of the full order schema requires an active, unprinted order.
-- **Reports (v1)**: Currently returning `500 Server Error` on initial probes. Likely requires specific permissions or a more complex query.
+- **Translations (`v2/venues/{venueId}/translations`)**: Currently returns an empty object `{}` for all tested venues. The mechanism for populating these strings is currently unverified.
 
 ## Project Context
 

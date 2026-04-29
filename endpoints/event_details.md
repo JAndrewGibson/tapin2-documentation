@@ -20,22 +20,31 @@ Returns a single event object. The structure is identical to the [Current Event]
 | Field | Type | Description |
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the event. |
-| `title` | String | Name of the event. |
-| `startDate` | String | Scheduled start time. |
-| `eventType` | Object | Metadata about the event category. |
+| `title` | String | Public name of the event. |
+| `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |
+| `endDate` | String | Scheduled end time. |
+| `orderingStartDate`| String | When customers can begin placing orders. |
+| `lastCallDate` | String | When ordering will be disabled. |
+| `isLastCall` | Boolean | Whether the event is currently in the "Last Call" period. |
+| `isCurrent` | Boolean | Whether this is the active/live event at the venue. |
+| `taxExempt` | Boolean | Whether sales for this event are tax-exempt. |
+| `eventType` | Object | Category/Pricing configuration for the event. |
 
 ## Example Response (Sanitized)
 
 ```json
 {
-    "id": 99999,
+    "id": 188698,
     "title": "Example Event",
     "startDate": "04/29/2026 5:00 PM",
+    "orderingStartDate": "04/29/2026 3:30 PM",
     "endDate": "04/30/2026 12:30 AM",
+    "taxExempt": false,
+    "isLastCall": false,
     "isCurrent": true,
     "eventType": {
-        "id": 10,
-        "title": "EXAMPLE_CATEGORY",
+        "id": 40,
+        "title": "EXAMPLE_TYPE",
         "priceLevelId": 23
     }
 }

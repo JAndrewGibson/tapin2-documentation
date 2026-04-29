@@ -21,9 +21,13 @@ The response is a JSON object containing venue configuration and metadata.
 | `id` | Integer | The unique ID of the venue. |
 | `title` | String | The full name of the venue. |
 | `displayName` | String | The name used for public display. |
+| `logoUrl` | String | URL to the venue's primary logo. |
+| `receiptLogoUrl` | String | URL to the logo used on printed receipts. |
 | `coords` | Object | Latitude and longitude coordinates. |
 | `taxRate` | Float | The primary tax rate for the venue (e.g., 7.75). |
 | `tipOptions` | Array | Suggested tip percentages (e.g., [18, 20, 22]). |
+| `isCashless` | Boolean | Whether the venue only accepts non-cash payments. |
+| `isAlcoholService` | Boolean | Whether the venue is configured for alcohol service. |
 | `fees` | Array | List of service fees and administrative charges. |
 | `timeZoneInfo` | Object | Detailed timezone data including daylight savings rules. |
 | `suiteUiOptions` | Integer | Bitmask for suite-specific UI configurations. |
@@ -47,12 +51,16 @@ The response is a JSON object containing venue configuration and metadata.
     "id": 1234,
     "title": "Example Venue - Suites",
     "displayName": "Example Venue",
+    "logoUrl": "https://storage.tapin2.co/images/example_logo.png",
+    "receiptLogoUrl": "https://storage.tapin2.co/images/example_receipt.png",
     "coords": {
         "lat": 0.000,
         "lng": 0.000
     },
     "taxRate": 7.75,
     "tipOptions": [18, 20, 22],
+    "isCashless": true,
+    "isAlcoholService": true,
     "fees": [
         {
             "id": 1,
@@ -63,7 +71,8 @@ The response is a JSON object containing venue configuration and metadata.
             "services": [1, 2, 3]
         }
     ],
-    "suiteUiOptions": 25088
+    "suiteUiOptions": 25088,
+    "preorderUiOptions": 0
 }
 ```
 

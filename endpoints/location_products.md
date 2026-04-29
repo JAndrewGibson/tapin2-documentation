@@ -19,11 +19,17 @@ Returns an array of location-product mapping objects.
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| `product` | Object | Full product metadata (see [products_venue.md](products_venue.md)). |
-| `location` | Object | Full location metadata (see [venue_locations.md](venue_locations.md)). |
-| `category` | Object | Category mapping for this product at this location. |
-| `fulfillmentGroup` | Object | The group responsible for fulfilling this product (e.g., "Kitchen", "Bar"). |
-| `isActive` | Boolean | Whether this product is currently active at this location. |
+| `product` | Object | Full product configuration (see [products_venue.md](products_venue.md)). |
+| `productId` | Integer | Unique identifier for the product. |
+| `location` | Object | Details of the assigned location. |
+| `locationId` | Integer | ID of the assigned location. |
+| `category` | Object | Details of the product category. |
+| `categoryId` | Integer | ID of the product category. |
+| `fulfillmentGroup`| Object | Details of the fulfillment group (e.g., "ALCOHOL"). |
+| `fulfillmentGroupId`| Integer | ID of the fulfillment group. |
+| `menuId` | Integer | ID of the menu this product-location mapping belongs to. |
+| `orderId` | Integer | Display order for the product within its category. |
+| `isActive` | Boolean | Whether the product is active at this location. |
 | `isVisible` | Boolean | Whether this product should be shown in the UI. |
 
 ### Category Object
@@ -39,15 +45,21 @@ Returns an array of location-product mapping objects.
 [
     {
         "productId": 1001,
+        "locationId": 401,
+        "categoryId": 501,
+        "fulfillmentGroupId": 201,
+        "isActive": true,
+        "isVisible": true,
+        "orderId": 10,
         "product": {
             "id": 1001,
             "title": "Example Beer",
             "price": 12.0
         },
-        "locationId": 5001,
         "location": {
-            "id": 5001,
-            "title": "Example Stand"
+            "id": 401,
+            "title": "Main Bar",
+            "isPaused": false
         },
         "category": {
             "id": 60,

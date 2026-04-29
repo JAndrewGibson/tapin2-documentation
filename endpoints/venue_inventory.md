@@ -18,24 +18,30 @@ Returns an array of inventory objects. Each object contains the product metadata
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| `product` | Object | Full product metadata (see [products_venue.md](products_venue.md)). |
-| `currentQuantity` | Integer | The current number of items remaining in stock. Returns `null` if inventory tracking is disabled. |
-| `defaultQuantity` | Integer | The starting stock level for the current event/period. |
-| `upc` | String | Barcode associated with the specific inventory item. |
+| `id` | Integer | Unique identifier for the inventory record. |
+| `productId` | Integer | ID of the associated product. |
+| `product` | Object | Full product configuration details (see [products_venue.md](products_venue.md) for schema). |
+| `modifier` | String | (Optional) Modifier string for the item. |
+| `upc` | String | (Optional) UPC for the item. |
+| `defaultQuantity`| Integer | Initial/Default quantity for the item. |
+| `currentQuantity`| Integer | Current stock level (null if not tracked). |
 
 ## Example Response (Sanitized)
 
 ```json
 [
     {
+        "id": 5001,
+        "productId": 1001,
         "product": {
             "id": 1001,
-            "title": "Example Item",
+            "title": "Example Product",
             "price": 10.0
         },
-        "currentQuantity": 50,
+        "modifier": "",
+        "upc": "123456789",
         "defaultQuantity": 100,
-        "upc": "1234567890"
+        "currentQuantity": 85
     }
 ]
 ```

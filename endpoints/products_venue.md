@@ -20,14 +20,21 @@ Returns an array of product objects.
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the product. |
 | `title` | String | Public name of the product. |
-| `description` | String | Long-form description (supports HTML-encoded characters). |
+| `internalTitle`| String | Internal/Admin name of the product. |
+| `sku` | String | Stock Keeping Unit identifier. |
+| `posId` | String | External ID for POS mapping. |
+| `description` | String | Long-form description. |
 | `price` | Float | Base price of the product. |
+| `calories` | Integer | Calorie count for the item. |
 | `isAlcohol` | Boolean | Flag indicating if the item contains alcohol. |
-| `isActive` | Boolean | Whether the product is currently available for purchase. |
+| `isActive` | Boolean | Whether the product is currently available. |
 | `categoryId` | Integer | ID of the parent category. |
 | `imageUrl` | String | URL to the product image asset. |
-| `productGroups` | Array | (Suites/Combos) List of component groups for packages. |
-| `priceLevels` | Array | List of available price levels for different event types. |
+| `showInSuite` | Boolean | Whether the product is visible for Suite service. |
+| `showInMobile` | Boolean | Whether the product is visible for Mobile ordering. |
+| `showInKiosk` | Boolean | Whether the product is visible for Kiosk ordering. |
+| `productGroups` | Array | (Packages/Combos) List of component groups. |
+| `priceLevels` | Array | List of available price levels. |
 | `modifierGroups`| Array | List of customization groups (e.g., "Add Ons"). |
 
 ### Product Group Object (Packages/Combos)
@@ -43,21 +50,31 @@ Returns an array of product objects.
 {
     "id": 1001,
     "title": "Example Package",
+    "internalTitle": "SUITE_PKG_EX",
+    "sku": "PKG-001",
+    "posId": "1001",
     "price": 500.0,
+    "calories": 1200,
     "isAlcohol": false,
+    "isActive": true,
+    "categoryId": 501,
+    "imageUrl": "https://storage.tapin2.co/images/example_pkg.jpg",
+    "showInSuite": true,
+    "showInMobile": false,
+    "showInKiosk": false,
     "productGroups": [
         {
             "id": 1,
-            "title": "Main Selection"
-        },
-        {
-            "id": 2,
-            "title": "Side Selection"
+            "title": "Main Selection",
+            "minChoices": 1,
+            "maxChoices": 1,
+            "products": []
         }
     ],
     "priceLevels": [
-        { "id": 10, "title": "Standard Pricing" }
-    ]
+        { "id": 10, "title": "Standard Pricing", "price": 500.0 }
+    ],
+    "modifierGroups": []
 }
 ```
 

@@ -15,12 +15,11 @@ Check the current availability status of a specific product.
 
 ## Response Structure
 
-Returns a Boolean value.
+Returns a raw Boolean value.
 
-| Value | Description |
-| :--- | :--- |
-| `true` | The product is active and available for ordering. |
-| `false` | The product is inactive or sold out. |
+| Field | Type | Description |
+| :--- | :--- | :--- |
+| `[result]` | Boolean | `true` if the product is active and available; `false` otherwise. |
 
 ## Example Response
 

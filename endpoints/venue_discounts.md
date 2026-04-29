@@ -20,12 +20,16 @@ Returns an array of discount objects.
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the discount. |
 | `title` | String | Public name of the discount. |
-| `code` | String | The code used to trigger the discount (e.g., promo code or employee ID). |
+| `code` | String | The alphanumeric promo code (if applicable). |
+| `description` | String | Detailed description of the discount rules. |
 | `amount` | Float | The value of the discount. |
-| `isPercentage` | Boolean | Whether the amount is a percentage (e.g., 1.0 = 100%) or a flat value. |
-| `isActive` | Boolean | Whether the discount is currently available for use. |
-| `isProductSpecific`| Boolean | If true, the discount only applies to products listed in `productIds`. |
-| `productIds` | Array | List of product IDs eligible for this discount. |
+| `amountString`| String | Human-readable value (e.g., "10%", "$5.00"). |
+| `isPercentage` | Boolean | Whether the amount is a percentage or flat value. |
+| `isActive` | Boolean | Whether the discount is currently enabled. |
+| `autoApply` | Boolean | Whether the discount is applied automatically if criteria are met. |
+| `isProductSpecific`| Boolean | Whether the discount only applies to certain products. |
+| `productIds` | Array | List of product IDs eligible for the discount. |
+| `minSubtotal` | Float | Minimum cart subtotal required to use the discount. |
 | `maxUseCount` | Integer | Limit on how many times this specific code can be used. |
 
 ## Example Response (Sanitized)
@@ -33,19 +37,10 @@ Returns an array of discount objects.
 ```json
 [
     {
-        "id": 1001,
-        "title": "Example Manager Discount",
-        "code": "EMP123",
-        "amount": 1.0,
-        "isPercentage": true,
-        "isActive": true,
-        "isProductSpecific": false,
-        "productIds": []
-    },
-    {
-        "id": 1002,
-        "title": "$5 Off Promotion",
-        "code": "SAVE5",
+        "id": 8001,
+        "title": "EXAMPLE_DISCOUNT",
+        "code": "PROMO2026",
+        "description": "Seasonal fan discount",
         "amount": 5.0,
         "isPercentage": false,
         "isActive": true,

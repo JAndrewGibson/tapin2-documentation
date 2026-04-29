@@ -19,8 +19,8 @@ Returns an object containing metadata and content configuration.
 
 | Field | Type | Description |
 | :--- | :--- | :--- |
-| `venueId` | Integer | The ID of the venue. |
-| `locationId` | Integer | The ID of the location. |
+| `{slug}` | Object | A content entry identified by a unique slug or numeric ID. |
+| `{slug}.{locale}` | String | The localized content string or HTML snippet. |
 | `idleTimeUntilWarning` | Integer | Time (in seconds) before an idle warning is shown on terminal/kiosk. |
 | `orderConfirmationDuration` | Integer | How long the confirmation screen stays visible. |
 | `timeoutWarningDuration` | Integer | Duration of the timeout warning countdown. |
@@ -30,12 +30,15 @@ Returns an object containing metadata and content configuration.
 
 ```json
 {
-    "venueId": 123,
-    "locationId": 456,
-    "idleTimeUntilWarning": 60,
-    "orderConfirmationDuration": 10,
-    "timeoutWarningDuration": 15,
-    "content": {}
+    "mobileIdleNoEvent": {
+        "en-US": "<h1>EVENT ENDED</h1><p>Ordering for this event has ended.</p>"
+    },
+    "mobilePaymentHeader": {
+        "en-US": "<h1>Final Step</h1><p>Please select a payment method.</p>"
+    },
+    "suiteFeeLabel": {
+        "en-US": "Service Charge"
+    }
 }
 ```
 

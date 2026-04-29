@@ -21,20 +21,38 @@ Returns an array of location objects. This structure is identical to the [Venue 
 | :--- | :--- | :--- |
 | `id` | Integer | Unique identifier for the location. |
 | `title` | String | Name of the location. |
-| `isDelivery` | Boolean | Whether this location supports delivery. |
-| `isPickup` | Boolean | Whether this location supports pickup. |
+| `description`| String | Detailed description of the location. |
+| `section` | String | Seating section associated with the location. |
+| `imageUrl` | String | Primary image URL for the location. |
+| `imageUrlTerminal`| String | Image URL for terminal/POS display. |
+| `isDelivery` | Boolean | Whether this location supports delivery service. |
+| `isPickup` | Boolean | Whether this location supports pickup service. |
+| `isHawker` | Boolean | Whether this location is a mobile hawker. |
 | `isActive` | Boolean | Whether the location is currently available. |
+| `isPaused` | Boolean | Whether service is temporarily paused. |
+| `pauseExpiration`| String | ISO timestamp when the current pause expires. |
+| `waitTime` | String | Human-readable wait time string. |
+| `orderingEnabled`| Boolean | Global toggle for ordering at this location. |
 
 ## Example Response (Sanitized - Preorder Filter)
 
 ```json
 [
     {
-        "id": 11111,
-        "title": "EXAMPLE_CATEGORY",
+        "id": 12345,
+        "title": "Example Preorder Stand",
+        "description": "Premium Level Concessions",
+        "section": "200",
+        "imageUrl": "https://storage.tapin2.co/images/example_pre.png",
+        "imageUrlTerminal": "https://storage.tapin2.co/images/example_pos.png",
         "isDelivery": false,
         "isPickup": true,
-        "isActive": true
+        "isHawker": false,
+        "isActive": true,
+        "isPaused": false,
+        "pauseExpiration": null,
+        "waitTime": "approx wait 0-5 mins",
+        "orderingEnabled": true
     },
     {
         "id": 22222,
