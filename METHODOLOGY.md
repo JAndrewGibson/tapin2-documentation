@@ -1,0 +1,31 @@
+# Methodology
+
+This document outlines the testing and verification process used to ensure the accuracy of the Tapin2 API documentation. Given that the official documentation is frequently incomplete or incorrect, we rely on a systematic exploratory approach.
+
+## Verification Process
+
+### 1. Exploratory Probing
+Every endpoint is tested against live sandbox environments using various venue types to capture structural variance:
+- **Suite-based Venues**: Used to verify tab-based workflows, packages, and complex product components.
+- **Concessions-based Venues**: Used to verify standard, flat-rate concession behavior.
+
+### 2. Schema Discovery
+Since sample responses in official docs are often incorrect, we generate schemas based on live JSON responses. We perform:
+- **Null-Value Analysis**: Repeated calls across different events/venues to identify optional fields.
+- **Data Type Validation**: Confirming whether fields are consistent (e.g., ensuring IDs are consistently integers vs. strings).
+- **Component Deep-Dives**: For complex objects like "Combos" or "Packages," we map out the nested structures that differ from standard products.
+
+### 3. Versioning Strategy
+We explicitly test different version headers (`v1` through `v4`) and `{version}` placeholders to determine:
+- Feature parity between versions.
+- Deprecation status.
+- Structural changes in responses.
+
+### 4. Safety & State Integrity
+For any state-modifying endpoints (`PUT`, `POST` on orders, etc.), the following rules apply:
+- **Pre-Approval**: No state-modifying call is made without explicit user consent.
+- **Isolated Testing**: Tests are performed only on specific items or venues designated by the user as "safe for modification."
+
+## Documentation Quality Standards
+- **Real Examples**: All examples are derived from live API responses, not extrapolated from official documentation.
+- **Granular Detail**: Each endpoint is documented in its own file to prevent information bleed between versions or similar-looking endpoints.
