@@ -6,7 +6,7 @@ This repository serves as the primary, complete source of documentation for the 
 
 Explore the documented and planned endpoints below. Categories are grouped by their primary function.
 
-<details>
+<details markdown="1">
 <summary><b>Category Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -17,7 +17,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Event Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -29,7 +29,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Location Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -39,7 +39,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Order & Cart Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -54,7 +54,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Product Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -68,7 +68,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Venue & VenueGroup Endpoints</b></summary>
 
 | Method | Endpoint | Status |
@@ -81,7 +81,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><b>Other Endpoints (Seat, User, Report, etc.)</b></summary>
 
 | Category | Method | Endpoint | Status |
