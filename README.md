@@ -2,6 +2,8 @@
 
 This repository serves as the primary, complete source of documentation for the Tapin2 API, verified against live sandbox responses.
 
+![Progress](https://progress-bar.dev/47/?title=Documentation%20Complete&width=400)
+
 ## Endpoint Registry
 
 Explore the documented and planned endpoints below. Categories are grouped by their primary function.
