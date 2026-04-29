@@ -1,6 +1,6 @@
 # Tapin2 API Documentation
 
-This repository serves as the primary, complete source of documentation for the Tapin2 API, verified against live sandbox responses.
+I am systematically probing the Tapin2 API to verify responses against live sandbox data. If you have experience with this endpoint or have sample JSON responses (sanitized), please feel free to contribute to this documentation.
 
 ![Progress](https://img.shields.io/badge/Documentation_Progress-79%25-blue)
 
@@ -9,30 +9,30 @@ This repository serves as the primary, complete source of documentation for the 
 Explore the documented and planned endpoints below. Categories are grouped by their primary function.
 
 <details markdown="1">
-<summary><b>Category Endpoints</b></summary>
+<summary><b>Category Endpoints (67%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/locations/{locationId}/categories`](endpoints/categories.md) | ✅ Documented |
-| POST | [`{version}/Category`](endpoints/category_post.md) | 📝 Planned |
+| POST | [`{version}/Category`](endpoints/PLANNED.md) | 📝 Planned |
 | GET | [`{version}/Category`](endpoints/category_get.md) | ✅ Documented |
 
 </details>
 
 <details markdown="1">
-<summary><b>Event Endpoints</b></summary>
+<summary><b>Event Endpoints (75%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/events/{minDate}/{maxDate}`](endpoints/events_range.md) | ✅ Documented |
-| POST | [`v2/events/{minDate}/{maxDate}`](endpoints/events_range_post.md) | 📝 Planned |
+| POST | [`v2/events/{minDate}/{maxDate}`](endpoints/PLANNED.md) | 📝 Planned |
 | GET | [`v2/venues/{venueId}/events/current`](endpoints/events_current.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/events/{eventId}`](endpoints/event_details.md) | ✅ Documented |
 
 </details>
 
 <details markdown="1">
-<summary><b>Location Endpoints</b></summary>
+<summary><b>Location Endpoints (100%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -42,22 +42,22 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Order & Cart Endpoints</b></summary>
+<summary><b>Order & Cart Endpoints (29%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted.md) | ✅ Documented |
 | GET | [`v1/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted_v1.md) | ✅ Documented |
-| POST | [`v2/cart/add`](endpoints/cart_add.md) | 📝 Planned |
-| POST | [`v2/cart/remove`](endpoints/cart_remove.md) | 📝 Planned |
-| POST | [`v2/cart/updatequantity`](endpoints/cart_update_quantity.md) | 📝 Planned |
-| GET | [`v4/venues/{venueId}/events/{eventId}/orders/small`](endpoints/orders_small.md) | 📝 Planned |
-| POST | [`v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`](endpoints/order_item_bump.md) | 📝 Planned |
+| POST | [`v2/cart/add`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`v2/cart/remove`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`v2/cart/updatequantity`](endpoints/PLANNED.md) | 📝 Planned |
+| GET | [`v4/venues/{venueId}/events/{eventId}/orders/small`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`](endpoints/PLANNED.md) | 📝 Planned |
 
 </details>
 
 <details markdown="1">
-<summary><b>Product Endpoints</b></summary>
+<summary><b>Product Endpoints (83%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -71,7 +71,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Venue & VenueGroup Endpoints</b></summary>
+<summary><b>Venue & VenueGroup Endpoints (100%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -84,14 +84,14 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Other Endpoints (Seat, User, Report, etc.)</b></summary>
+<summary><b>Other Endpoints (Seat, User, Report, etc.) (86%)</b></summary>
 
 | Category | Method | Endpoint | Status |
 | :--- | :--- | :--- | :--- |
 | **Seat** | GET | [`v2/venues/{venueId}/events/{eventId}/sections`](endpoints/venue_sections.md) | ✅ Documented |
 | **User** | GET | [`v4/venues/{venueId}/users/pin/{pin}`](endpoints/user_by_pin.md) | ✅ Documented |
 | **Report** | GET | [`v1/venues/{venueId}/reports/{reportType}/{fromDate}/{toDate}`](endpoints/reports_v1.md) | ✅ Documented |
-| **Error** | POST | [`v2/venues/{venueId}/error`](endpoints/error_report.md) | 📝 Planned |
+| **Error** | POST | [`v2/venues/{venueId}/error`](endpoints/PLANNED.md) | 📝 Planned |
 | **Print** | GET | [`v3/venues/{venueId}/locations/{locationId}/print`](endpoints/location_print_queue.md) | ✅ Documented |
 | **Tab** | GET | [`v2/venues/{venueId}/tabs/unprinted`](endpoints/tabs_unprinted.md) | ✅ Documented |
 | **Tab2** | GET | [`v4/venues/{venueId}/tabs/{tabId}`](endpoints/tab_details_v4.md) | ✅ Documented |
@@ -111,7 +111,7 @@ The following endpoints are currently documented but known to return errors or e
 
 ## Project Context
 
-- [METHODOLOGY.md](METHODOLOGY.md): Detailed explanation of our API verification and documentation process.
+- [METHODOLOGY.md](METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
 
 ### Key Venue Types
 - **Suites**: Suite-based service including tabs and packages.

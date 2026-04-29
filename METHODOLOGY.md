@@ -1,6 +1,6 @@
 # Methodology
 
-This document outlines the testing and verification process used to ensure the accuracy of the Tapin2 API documentation. Given that the official documentation is frequently incomplete or incorrect, we rely on a systematic exploratory approach.
+This document outlines the testing and verification process used to ensure the accuracy of the Tapin2 API documentation. Given that the official documentation is frequently incomplete or incorrect, I rely on a systematic exploratory approach.
 
 ## Verification Process
 
@@ -10,13 +10,13 @@ Every endpoint is tested against live sandbox environments using various venue t
 - **Concessions-based Venues**: Used to verify standard, flat-rate concession behavior.
 
 ### 2. Schema Discovery
-Since sample responses in official docs are often incorrect, we generate schemas based on live JSON responses. We perform:
+Since sample responses in official docs are often incorrect, I generate schemas based on live JSON responses. I perform:
 - **Null-Value Analysis**: Repeated calls across different events/venues to identify optional fields.
 - **Data Type Validation**: Confirming whether fields are consistent (e.g., ensuring IDs are consistently integers vs. strings).
-- **Component Deep-Dives**: For complex objects like "Combos" or "Packages," we map out the nested structures that differ from standard products.
+- **Component Deep-Dives**: For complex objects like "Combos" or "Packages," I map out the nested structures that differ from standard products.
 
 ### 3. Versioning Strategy
-We explicitly test different version headers (`v1` through `v4`) and `{version}` placeholders to determine:
+I explicitly test different version headers (`v1` through `v4`) and `{version}` placeholders to determine:
 - Feature parity between versions.
 - Deprecation status.
 - Structural changes in responses.
