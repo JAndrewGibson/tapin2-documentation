@@ -52,4 +52,4 @@ Returns an array of location objects. This structure is identical to the [Venue 
 - **Suite-based Venues**: Frequently use this to separate "Day Of" ordering from "Advanced Preorder" ordering windows.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

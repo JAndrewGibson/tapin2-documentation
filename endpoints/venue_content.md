@@ -44,4 +44,4 @@ Returns an object containing metadata and content configuration.
 - **Empty Content**: Like translations, the `content` dictionary is frequently empty unless specific overrides have been configured in the Tapin2 management dashboard.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

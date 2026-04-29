@@ -29,4 +29,4 @@ Returns a JSON object mapping translation keys to localized strings.
 - **Empty Responses**: As of current testing, both Suite-based and Concessions-based test venues returned empty translation objects. This suggests that translations may be handled at a global or application level rather than per-venue, or are simply not used in these specific environments.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

@@ -67,4 +67,4 @@ Returns an array of product objects.
 - **Concessions-based Venues**: Typically returns standard items with generic `imageUrl` and `priceLevels` corresponding to event types (e.g., "Game Day" vs "Concert").
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

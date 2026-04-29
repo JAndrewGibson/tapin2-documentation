@@ -63,4 +63,4 @@ Returns an array of location objects.
 - **Concessions-based Venues**: Locations represent physical stands. `isPickup` is the primary service method. Closed locations will often have `isActive: false` or specific text in the `title`.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

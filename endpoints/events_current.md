@@ -57,4 +57,4 @@ Returns an event object if an event is currently active, or `null` if no event i
 - **Concessions-based Venues**: Generally returns the active game or concert currently in progress.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

@@ -61,4 +61,4 @@ Returns an array of event objects. The structure is identical to the [Current Ev
 - **Preorder Windows**: For suite-based venues, this endpoint is often used to show customers a calendar of upcoming games for advanced ordering.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

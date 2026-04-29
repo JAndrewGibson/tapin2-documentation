@@ -73,4 +73,4 @@ The response is a JSON object containing venue configuration and metadata.
 - **Concessions-based Venues**: Often includes more complex `fees` structures with `offLocationIds` for specific location exclusions.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)

@@ -61,4 +61,4 @@ Returns an array of discount objects.
 - **Product Specificity**: Some discounts are restricted to specific items (e.g., "Buy a burger, get a discount"). These will have `isProductSpecific: true`.
 
 ---
-[← Back to Endpoint Registry](README.md)
+[← Back to Endpoint Registry](../README.md)
