@@ -113,6 +113,8 @@ The following endpoints are currently documented but known to return errors or e
 
 - [METHODOLOGY.md](METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
 
+- [CHANGELOG.md](CHANGELOG.md): A log of all updates to this documentation.
+
 ### Key Venue Types
 - **Suites**: Suite-based service including tabs and packages.
 - **Concessions**: Standard physical concession stand service.
