@@ -14,7 +14,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/locations/{locationId}/categories`](endpoints/categories.md) | ✅ Documented |
-| POST | [`{version}/Category`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`{version}/Category`](endpoints/category_post.md) | ❌ Blocked (500 Error) |
 | GET | [`{version}/Category`](endpoints/category_get.md) | ✅ Documented |
 
 </details>
@@ -108,6 +108,7 @@ The following endpoints are currently documented but known to return errors or e
 - **v2/venues/{venueId}/orders/unprinted**: Returns `[]` unless active, unprinted orders exist in the current event context.
 - **Suite-based Event Data**: Current event calls for suite-based venues frequently return `null` outside of specific preorder windows.
 - **Translations (`v2/venues/{venueId}/translations`)**: Currently returns an empty object `{}` for all tested venues. The mechanism for populating these strings is currently unverified.
+- **POST {version}/Category**: Returns `500 Internal Server Error` with `System.NullReferenceException` in `SubmitIntegrationsAsync`. This appears to be a backend failure when synchronizing with POS integrations in the sandbox environment.
 
 ## Project Context
 
