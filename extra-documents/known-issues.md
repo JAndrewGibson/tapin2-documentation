@@ -1,7 +1,3 @@
----
-title: Known Issues & API Caveats
----
-
 # Known Issues & API Caveats
 
 This document catalogs all non-functional endpoints, behavioral inconsistencies, and architectural caveats identified during the systematic probing of the Tapin2 API in the sandbox environment.
