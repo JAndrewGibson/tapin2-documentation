@@ -3,8 +3,7 @@
 
 I am systematically probing the Tapin2 API to verify responses against live sandbox data. This project tracks the verification status of all major endpoints and identifies known deficiencies in the sandbox environment.
 
-![Progress](https://img.shields.io/badge/Documentation_Progress-100%25-green)
-[![Known Issues](https://img.shields.io/badge/Deficiencies-View_Known_Issues-red)](Extra%20Documents/known-issues.md)
+**Known Issues:** [View Known Issues](Extra%20Documents/known-issues.md)
 
 ## Status Legend
 - ✅ **Documented**: Verified with live sandbox data. Structure and examples are confirmed.
@@ -104,6 +103,8 @@ Explore the documented endpoints below. Click a category to expand its list of e
 | **Tab2** | GET | [`v4/venues/{venueId}/tabs/{tabId}`](endpoints/tab_details_v4.md) | ✅ Documented |
 
 </details>
+
+<br>
 
 ## Agentic Usage
 
