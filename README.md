@@ -2,7 +2,7 @@
 
 I am systematically probing the Tapin2 API to verify responses against live sandbox data. If you have experience with this endpoint or have sample JSON responses (sanitized), please feel free to contribute to this documentation.
 
-![Progress](https://img.shields.io/badge/Documentation_Progress-79%25-blue)
+![Progress](https://img.shields.io/badge/Documentation_Progress-82%25-blue)
 
 ## Endpoint Registry
 
@@ -42,15 +42,15 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Order & Cart Endpoints (29%)</b></summary>
+<summary><b>Order & Cart Endpoints (71%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted.md) | ✅ Documented |
 | GET | [`v1/venues/{venueId}/orders/unprinted`](endpoints/orders_unprinted_v1.md) | ✅ Documented |
-| POST | [`v2/cart/add`](endpoints/PLANNED.md) | 📝 Planned |
-| POST | [`v2/cart/remove`](endpoints/PLANNED.md) | 📝 Planned |
-| POST | [`v2/cart/updatequantity`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`v2/cart/add`](endpoints/cart_add.md) | ❌ Blocked (500 Error) |
+| POST | [`v2/cart/remove`](endpoints/cart_remove.md) | ❌ Blocked (500 Error) |
+| POST | [`v2/cart/updatequantity`](endpoints/cart_update_quantity.md) | ❌ Blocked (500 Error) |
 | GET | [`v4/venues/{venueId}/events/{eventId}/orders/small`](endpoints/PLANNED.md) | 📝 Planned |
 | POST | [`v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`](endpoints/PLANNED.md) | 📝 Planned |
 
@@ -109,6 +109,8 @@ The following endpoints are currently documented but known to return errors or e
 - **Suite-based Event Data**: Current event calls for suite-based venues frequently return `null` outside of specific preorder windows.
 - **Translations (`v2/venues/{venueId}/translations`)**: Currently returns an empty object `{}` for all tested venues. The mechanism for populating these strings is currently unverified.
 - **POST {version}/Category**: Returns `500 Internal Server Error` with `System.NullReferenceException` in `SubmitIntegrationsAsync`. This appears to be a backend failure when synchronizing with POS integrations in the sandbox environment.
+- **Cart Management (`v2/cart/*`)**: `add`, `remove`, and `updatequantity` endpoints consistently return `500 Internal Server Error` (`ArgumentNullException`) during the `OrderingCutOff` validation phase, even when provided with valid `eventId` and `locationId` contexts from active orders.
+- **Timestamp Discrepancies**: The API exhibits inconsistent timezone behavior. Event-related endpoints (`v2/events/*`) typically return localized venue time (PST), while Order-related endpoints (`v2/venues/{id}/orders/*`) return timestamps in **UTC**.
 
 ## Project Context
 
