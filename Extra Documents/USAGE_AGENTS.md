@@ -1,3 +1,8 @@
+---
+layout: default
+title: API Usage Guide for Agents
+---
+
 # Tapin2 API Usage Guide for AI Agents
 
 This document provides essential context and technical constraints for AI agents tasked with integrating or interacting with the Tapin2 API.
@@ -24,16 +29,16 @@ The following operations are known to fail in the sandbox environment and should
 - **Cart Operations**: `POST /cart/add`, `remove`, `updatequantity` (Returns 500).
 - **Legacy Reports**: `v1/reports/*` (Returns 500).
 
-Refer to [known_issues.md](known_issues.md) for a full list of deficiencies.
+Refer to [known-issues.md](known-issues.md) for a full list of deficiencies.
 
 ## 📦 Core Data Models
 Refer to the following structured models for response parsing:
-- [EventType](models/event_type.md): Pricing and categorization for events.
-- [Product](models/product.md): Item metadata and pricing.
-- [Order/Item](models/item.md): Transaction and line-item details.
-- [Modifier](models/modifier.md): Flattened (v4) or nested (v2) product options.
-- [Venue](models/venue.md): Top-level venue configuration and metadata.
-- [Location](models/location.md): Physical service areas (stands, bars, etc.).
+- [EventType](../models/event_type.md): Pricing and categorization for events.
+- [Product](../models/product.md): Item metadata and pricing.
+- [Order/Item](../models/item.md): Transaction and line-item details.
+- [Modifier](../models/modifier.md): Flattened (v4) or nested (v2) product options.
+- [Venue](../models/venue.md): Top-level venue configuration and metadata.
+- [Location](../models/location.md): Physical service areas (stands, bars, etc.).
 
 ## 🛠️ Best Practices
 - **Large Payloads**: Product and Order arrays can be massive. Always use `count` or `limit` parameters when exploring.
@@ -42,6 +47,6 @@ Refer to the following structured models for response parsing:
 
 ---
 - [METHODOLOGY.md](METHODOLOGY.md): Explanation of the verification and sanitization process.
-- [known_issues.md](known_issues.md): Full list of API caveats and deficiencies.
+- [known-issues.md](known-issues.md): Full list of API caveats and deficiencies.
 
-[← Back to Main Registry](README.md)
+[← Back to Main Registry](../README.md)

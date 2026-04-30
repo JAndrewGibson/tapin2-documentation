@@ -1,3 +1,7 @@
+---
+title: Known Issues & API Caveats
+---
+
 # Known Issues & API Caveats
 
 This document catalogs all non-functional endpoints, behavioral inconsistencies, and architectural caveats identified during the systematic probing of the Tapin2 API in the sandbox environment.
@@ -11,11 +15,11 @@ These endpoints consistently return a `500 Internal Server Error` despite provid
 
 | Endpoint | Method | Identified Issue |
 | :--- | :--- | :--- |
-| [`{version}/Category`](endpoints/category_post.md) | POST | Fails with `NullReferenceException` in `SubmitIntegrationsAsync`. This suggests a failure in the synchronization layer between Tapin2 and downstream POS integrations (e.g., Quest, Bypass). |
-| [`v2/cart/add`](endpoints/cart_add.md) | POST | Fails with `ArgumentNullException` (Parameter: `source`) in `OrderingCutOff`. This occurs even when valid `eventId` and `locationId` contexts are provided from active orders. |
-| [`v2/cart/remove`](endpoints/cart_remove.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
-| [`v2/cart/updatequantity`](endpoints/cart_update_quantity.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
-| [`v1/venues/{venueId}/reports/*`](endpoints/reports_v1.md) | GET | Returns 500. This legacy reporting system appears to be deprecated in favor of the newer Management Console exports. |
+| [`{version}/Category`](../endpoints/category_post.md) | POST | Fails with `NullReferenceException` in `SubmitIntegrationsAsync`. This suggests a failure in the synchronization layer between Tapin2 and downstream POS integrations (e.g., Quest, Bypass). |
+| [`v2/cart/add`](../endpoints/cart_add.md) | POST | Fails with `ArgumentNullException` (Parameter: `source`) in `OrderingCutOff`. This occurs even when valid `eventId` and `locationId` contexts are provided from active orders. |
+| [`v2/cart/remove`](../endpoints/cart_remove.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
+| [`v2/cart/updatequantity`](../endpoints/cart_update_quantity.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
+| [`v1/venues/{venueId}/reports/*`](../endpoints/reports_v1.md) | GET | Returns 500. This legacy reporting system appears to be deprecated in favor of the newer Management Console exports. |
 
 ## 2. Inconsistent Timezone Behavior
 
@@ -31,9 +35,9 @@ These endpoints return `404 Not Found` or empty results, suggesting they are eit
 
 | Endpoint | Method | Observed Behavior |
 | :--- | :--- | :--- |
-| [`v2/venues/{venueId}/tabs/unprinted`](endpoints/tabs_unprinted.md) | GET | Returns 404. All unprinted activity for both concessions and suites appears to be routed through the standard v2 orders endpoint. |
-| [`v2/venuegroups/{groupId}/venueids`](endpoints/venue_groups.md) | GET | Returns 404. This may require specific Venue Group administrator permissions. |
-| [`v2/venues/{venueId}/translations`](endpoints/venue_translations.md) | GET | Returns an empty object `{}`. The mechanism for populating and retrieving these strings remains unverified. |
+| [`v2/venues/{venueId}/tabs/unprinted`](../endpoints/tabs_unprinted.md) | GET | Returns 404. All unprinted activity for both concessions and suites appears to be routed through the standard v2 orders endpoint. |
+| [`v2/venuegroups/{groupId}/venueids`](../endpoints/venue_groups.md) | GET | Returns 404. This may require specific Venue Group administrator permissions. |
+| [`v2/venues/{venueId}/translations`](../endpoints/venue_translations.md) | GET | Returns an empty object `{}`. The mechanism for populating and retrieving these strings remains unverified. |
 
 ## 4. Sandbox Behavioral Caveats
 
@@ -54,4 +58,4 @@ If your integration requires any of the blocked or non-functional endpoints list
 3.  Request a specific `DeviceId` or `SessionToken` if required for Cart operations.
 
 ---
-[← Back to Main Registry](README.md)
+[← Back to Main Registry](../README.md)

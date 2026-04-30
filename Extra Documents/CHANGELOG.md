@@ -1,3 +1,8 @@
+---
+layout: default
+title: Changelog
+---
+
 # Changelog
 
 All notable changes to this documentation project will be noted here.
@@ -26,7 +31,7 @@ All notable changes to this documentation project will be noted here.
 - **Agentic Usage**: Created [USAGE_AGENTS.md](USAGE_AGENTS.md) as a downloadable context provider for external AI agents.
 - **Model Linking**: Replicated the behavior of the original Tapin2 help system by creating a `models/` directory for shared structures (Product, EventType, Item, etc.) and linking the "Type" column in documentation tables to these models.
 - **Help Link Precision**: Corrected "Original Documentation" links to point to the specific route-based URLs on the Tapin2 help site rather than the generic landing page.
-- **Known Issues Guide**: Created [known_issues.md](known_issues.md) (renamed from `BLOCKED.md`) as a comprehensive guide to sandbox deficiencies and caveats.
+- **Known Issues Guide**: Created [known-issues.md](known-issues.md) (renamed from `BLOCKED.md`) as a comprehensive guide to sandbox deficiencies and caveats.
 - **README Redesign**: Overhauled the main registry with:
     - A clear **Status Legend** for Documented, Blocked, and Planned states.
     - Improved visual hierarchy using folder icons (📂) for expandable categories.

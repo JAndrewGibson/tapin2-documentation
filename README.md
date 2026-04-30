@@ -4,11 +4,11 @@
 I am systematically probing the Tapin2 API to verify responses against live sandbox data. This project tracks the verification status of all major endpoints and identifies known deficiencies in the sandbox environment.
 
 ![Progress](https://img.shields.io/badge/Documentation_Progress-100%25-green)
-[![Known Issues](https://img.shields.io/badge/Deficiencies-View_Known_Issues-red)](known_issues.md)
+[![Known Issues](https://img.shields.io/badge/Deficiencies-View_Known_Issues-red)](Extra%20Documents/known-issues.md)
 
 ## Status Legend
 - ✅ **Documented**: Verified with live sandbox data. Structure and examples are confirmed.
-- ❌ **Blocked**: Endpoint exists but consistently returns 404/500/Empty. See [known_issues.md](known_issues.md) for details.
+- ❌ **Blocked**: Endpoint exists but consistently returns 404/500/Empty. See [known-issues.md](Extra%20Documents/known-issues.md) for details.
 - 📝 **Planned**: Not yet probed or documented in this cycle.
 
 ## Endpoint Registry
@@ -109,13 +109,13 @@ Explore the documented endpoints below. Click a category to expand its list of e
 
 This repository includes a specialized guide for AI agents tasked with developing applications that consume the Tapin2 API:
 
-- [🤖 API Usage Guide for Agents (USAGE_AGENTS.md)](USAGE_AGENTS.md): Critical technical constraints, timezone rules, and model references for API integration.
+- [🤖 API Usage Guide for Agents (USAGE_AGENTS.md)](Extra%20Documents/USAGE_AGENTS.md): Critical technical constraints, timezone rules, and model references for API integration.
 
 ## Project Context
 
-- [METHODOLOGY.md](METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
-- [known_issues.md](known_issues.md): In-depth look at non-functional endpoints and behavioral caveats.
-- [CHANGELOG.md](CHANGELOG.md): A log of all updates to this documentation.
+- [METHODOLOGY.md](Extra%20Documents/METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
+- [known-issues.md](Extra%20Documents/known-issues.md): In-depth look at non-functional endpoints and behavioral caveats.
+- [CHANGELOG.md](Extra%20Documents/CHANGELOG.md): A log of all updates to this documentation.
 
 ### Key Venue Types
 - **Suites**: Suite-based service including tabs and packages.
