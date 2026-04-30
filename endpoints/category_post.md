@@ -56,4 +56,6 @@ The following payload variations were tested against `v2/Category` for **Venue A
 - **Backend Crash**: Once `venueId` is provided, the API proceeds to integration logic where it consistently crashes with a `NullReferenceException`.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-version-Category)
+
 [← Back to Endpoint Registry](../README.md)

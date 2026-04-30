@@ -63,4 +63,6 @@ Returns an array of section objects.
 - **Groupings**: Sections are logically grouped (e.g., by level or ticket type) to simplify UI display.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-events-eventId-sections)
+
 [← Back to Endpoint Registry](../README.md)

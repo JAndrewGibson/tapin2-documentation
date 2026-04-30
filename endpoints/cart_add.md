@@ -37,4 +37,6 @@ The following variations were tested at **Venue B** (Concessions) using active e
 Despite providing valid `eventId` and `locationId` contexts (verified against successful orders in the same environment), the backend logic for ordering cut-off validation appears to encounter a null reference when processing these requests. This suggests either a missing required session-level field or a backend misconfiguration in the sandbox environment.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-v2-cart-add)
+
 [← Back to Endpoint Registry](../README.md)

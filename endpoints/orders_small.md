@@ -34,7 +34,7 @@ Returns an array of "small" order objects.
 | `discountGross`| Float | Total discount amount applied. |
 | `discountCode` | String | The coupon or manager discount code used. |
 | `totalGross` | Float | Final total charged to the customer. |
-| `items` | Array | Simplified list of items in the order. |
+| `items` | [Array](../models/item.md) | Simplified list of items in the order. |
 
 ### Small Item Object
 
@@ -48,7 +48,7 @@ Returns an array of "small" order objects.
 | `quantity` | Integer | Number of units. |
 | `pricePer` | Float | Unit price. |
 | `total` | Float | Line item total. |
-| `modifiers` | Array | List of modifiers applied to the item. |
+| `modifiers` | [Array](../models/modifier.md) | List of modifiers applied to the item. |
 
 ### Modifier Object
 
@@ -106,4 +106,6 @@ Returns an array of "small" order objects.
 - **Timezones**: Like other order endpoints, timestamps are returned in **UTC**.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v4-venues-venueId-events-eventId-orders-small)
+
 [← Back to Endpoint Registry](../README.md)

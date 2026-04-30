@@ -53,4 +53,6 @@ Returns a user profile object.
 - **PIN Security**: PINs are typically 4-9 digits long and are managed within the Tapin2 Management Console.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v4-venues-venueId-users-pin-pin)
+
 [← Back to Endpoint Registry](../README.md)

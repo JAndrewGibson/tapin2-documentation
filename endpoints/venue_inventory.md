@@ -52,4 +52,6 @@ Returns an array of inventory objects. Each object contains the product metadata
 - **Data Volume**: This endpoint returns the **full** product object for every item, making the response significantly larger than the standard products endpoint. Use with caution.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-inventory)
+
 [← Back to Endpoint Registry](../README.md)

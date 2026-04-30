@@ -70,4 +70,6 @@ Returns an array of location objects. This structure is identical to the [Venue 
 - **Suite-based Venues**: Frequently use this to separate "Day Of" ordering from "Advanced Preorder" ordering windows.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-locations-venueId)
+
 [← Back to Endpoint Registry](../README.md)

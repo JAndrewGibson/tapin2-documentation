@@ -31,4 +31,6 @@ Returns an array of print job objects.
 - **Data Format**: The print jobs often contain ESC/POS commands or raw text for the printer.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v3-venues-venueId-locations-locationId-print)
+
 [← Back to Endpoint Registry](../README.md)

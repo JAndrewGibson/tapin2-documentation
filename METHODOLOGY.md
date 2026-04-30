@@ -26,6 +26,16 @@ For any state-modifying endpoints (`PUT`, `POST` on orders, etc.), the following
 - **Pre-Approval**: No state-modifying call is made without explicit user consent.
 - **Isolated Testing**: Tests are performed only on specific items or venues designated by the user as "safe for modification."
 
+### 5. Sanitization & Anonymization
+To ensure security and privacy, all documented responses undergo a sanitization process:
+- **Identifier Masking**: Real Venue IDs, Product IDs, and Event IDs are replaced with generic placeholders (e.g., `VENUE_ID_1`).
+- **PII Removal**: Customer names, emails, and physical addresses are scrubbed and replaced with "Example Name" or "123 Example Way."
+- **Internal Reference Scrubbing**: Proprietary internal IDs and ERP reference strings are replaced with generic identifiers or `null`.
+
 ## Documentation Quality Standards
 - **Real Examples**: All examples are derived from live API responses, not extrapolated from official documentation.
 - **Granular Detail**: Each endpoint is documented in its own file to prevent information bleed between versions or similar-looking endpoints.
+- **Model-Driven Structure**: Complex objects link to shared schemas in the `models/` directory for consistency across the documentation suite.
+
+---
+[← Back to Main Registry](README.md)

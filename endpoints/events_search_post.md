@@ -36,7 +36,7 @@ Returns an array of event objects.
 | `taxExempt` | Boolean | Whether sales for this event are tax-exempt. |
 | `includeInReports` | Boolean | Whether data from this event is included in standard reports. |
 | `address` | String | Physical address or location name of the event. |
-| `eventType` | Object | Category/Pricing configuration for the event. |
+| `eventType` | [Object](../models/event_type.md) | Category/Pricing configuration for the event. |
 
 ## Example Response (Sanitized)
 
@@ -71,4 +71,6 @@ Returns an array of event objects.
 - **Parity**: The response data structure is identical to the GET version at `v2/venues/{venueId}/events/{minDate}/{maxDate}`.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-v2-events-minDate-maxDate)
+
 [← Back to Endpoint Registry](../README.md)

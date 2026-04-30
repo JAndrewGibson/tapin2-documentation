@@ -47,4 +47,6 @@ Returns an object containing metadata and content configuration.
 - **Empty Content**: Like translations, the `content` dictionary is frequently empty unless specific overrides have been configured in the Tapin2 management dashboard.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-content)
+
 [← Back to Endpoint Registry](../README.md)

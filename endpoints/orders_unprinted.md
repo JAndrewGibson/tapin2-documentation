@@ -9,7 +9,31 @@ Retrieve a list of orders that have been placed but not yet printed or fulfilled
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- |
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +41,25 @@ Retrieve a list of orders that have been placed but not yet printed or fulfilled
 Returns an array of complex order objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- |
 | `id` | Integer | Unique identifier for the order. |
 | `idLast3` | String | Last 3 digits of the order ID (often used as a display number). |
 | `venueId` | Integer | The venue where the order was placed. |
@@ -26,17 +68,35 @@ Returns an array of complex order objects.
 | `orderDate` | String | Timestamp of when the order was placed (**UTC**). |
 | `saleDate` | String | Timestamp of the financial transaction (**UTC**). |
 | `subtotalGross` | Float | Total before discounts and taxes. |
-| `discount` | Object | Details of applied discounts (code, description, amount). |
+| `discount` | [Object](../models/discount.md) | Details of applied discounts (code, description, amount). |
 | `totalGross` | Float | Final total amount. |
 | `isPaidInFull` | Boolean | Whether the transaction has been completed. |
-| `items` | Array | List of products in the order. |
+| `items` | [Array](../models/item.md) | List of products in the order. |
 | `distinctLocations`| Array | List of unique locations involved in the order. |
 | `receiptUrl` | String | Link to the digital receipt. |
 
 ### Item Object Structure
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- | :
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
+--- |
 | `id` | Integer | Unique identifier for the line item. |
 | `quantity` | Integer | Number of units purchased. |
 | `pricePer` | Float | Price per unit. |
@@ -88,5 +148,13 @@ Returns an array of complex order objects.
 - **Empty State**: If no unprinted orders exist, the endpoint returns an empty array `[]`.
 - **Fulfillment**: Once an order is marked as "Printed" or "Fulfilled" in the system, it will no longer appear in this list.
 
+
+## Related Endpoints
+
+- [Order Item Bump](order_item_bump.md)
+- [Orders (Small)](orders_small.md)
+
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-orders-unprinted)
+
 [← Back to Endpoint Registry](../README.md)

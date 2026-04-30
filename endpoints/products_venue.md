@@ -9,7 +9,31 @@ Retrieve a list of all products configured for a specific venue. This is the pri
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- |
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +41,25 @@ Retrieve a list of all products configured for a specific venue. This is the pri
 Returns an array of product objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- |
 | `id` | Integer | Unique identifier for the product. |
 | `title` | String | Public name of the product. |
 | `internalTitle`| String | Internal/Admin name of the product. |
@@ -40,7 +82,25 @@ Returns an array of product objects.
 ### Product Group Object (Packages/Combos)
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
+--- |
 | `id` | Integer | Unique ID for the component group. |
 | `title` | String | Name of the choice group (e.g., "Appetizer Selection"). |
 
@@ -83,5 +143,13 @@ Returns an array of product objects.
 - **Suite-based Venues**: Frequently returns products with `productGroups`, representing **Packages** where the user must select multiple items (e.g., "Main Selection", "Side Selection").
 - **Concessions-based Venues**: Typically returns standard items with generic `imageUrl` and `priceLevels` corresponding to event types (e.g., "Game Day" vs "Concert").
 
+
+## Related Endpoints
+
+- [Venue Inventory](venue_inventory.md)
+- [Location Products](location_products.md)
+
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-products)
+
 [← Back to Endpoint Registry](../README.md)

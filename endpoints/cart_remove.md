@@ -19,4 +19,6 @@ Remove an item from the user's shopping cart.
 | `cartItemId` | Integer | **Required**. The unique ID of the line item in the cart. |
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-v2-cart-remove)
+
 [← Back to Endpoint Registry](../README.md)

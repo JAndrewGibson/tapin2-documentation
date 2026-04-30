@@ -9,7 +9,31 @@ Get detailed information about a specific venue, including tax rates, tip option
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- |
 | `venueId` | Integer | Path | The unique identifier for the venue (e.g., Suite-based or Concessions-based ID). |
 
 ## Response Structure
@@ -17,7 +41,25 @@ Get detailed information about a specific venue, including tax rates, tip option
 The response is a JSON object containing venue configuration and metadata.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- |
 | `id` | Integer | The unique ID of the venue. |
 | `title` | String | The full name of the venue. |
 | `displayName` | String | The name used for public display. |
@@ -28,7 +70,7 @@ The response is a JSON object containing venue configuration and metadata.
 | `tipOptions` | Array | Suggested tip percentages (e.g., [18, 20, 22]). |
 | `isCashless` | Boolean | Whether the venue only accepts non-cash payments. |
 | `isAlcoholService` | Boolean | Whether the venue is configured for alcohol service. |
-| `fees` | Array | List of service fees and administrative charges. |
+| `fees` | [Array](../models/fee.md) | List of service fees and administrative charges. |
 | `timeZoneInfo` | Object | Detailed timezone data including daylight savings rules. |
 | `suiteUiOptions` | Integer | Bitmask for suite-specific UI configurations. |
 | `preorderUiOptions`| Integer | Bitmask for preorder-specific UI configurations. |
@@ -36,7 +78,25 @@ The response is a JSON object containing venue configuration and metadata.
 ### Fee Object Schema
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- | :
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
+--- |
 | `id` | Integer | Unique identifier for the fee. |
 | `title` | String | Name of the fee (e.g., "Admin Fee", "Service Charge"). |
 | `amount` | Float | The numerical value of the fee. |
@@ -81,5 +141,13 @@ The response is a JSON object containing venue configuration and metadata.
 - **Suite-based Venues**: Typically includes higher `suiteUiOptions` and multiple administrative fees specific to suite service.
 - **Concessions-based Venues**: Often includes more complex `fees` structures with `offLocationIds` for specific location exclusions.
 
+
+## Related Endpoints
+
+- [Venue Locations](venue_locations.md)
+- [Venue Discounts](venue_discounts.md)
+
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-details)
+
 [← Back to Endpoint Registry](../README.md)

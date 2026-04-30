@@ -33,4 +33,6 @@ true
 - **Idempotency**: Repeatedly bumping the same item will continue to return `true` as long as the order and item IDs are valid.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-v4-venues-venueId-orders-orderId-items-itemId-bump)
+
 [← Back to Endpoint Registry](../README.md)

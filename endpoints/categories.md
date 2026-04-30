@@ -64,4 +64,6 @@ Returns an array of category objects.
 - **Display Priority**: The `orderId` field should be used to sort categories in the user interface. Lower numbers typically indicate higher priority.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-locations-locationId-categories)
+
 [← Back to Endpoint Registry](../README.md)

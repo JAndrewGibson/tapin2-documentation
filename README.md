@@ -1,15 +1,21 @@
 # Tapin2 API Documentation
 
-I am systematically probing the Tapin2 API to verify responses against live sandbox data. If you have experience with this endpoint or have sample JSON responses (sanitized), please feel free to contribute to this documentation.
+I am systematically probing the Tapin2 API to verify responses against live sandbox data. This project tracks the verification status of all major endpoints and identifies known deficiencies in the sandbox environment.
 
-![Progress](https://img.shields.io/badge/Documentation_Progress-88%25-blue)
+![Progress](https://img.shields.io/badge/Documentation_Progress-100%25-green)
+[![Known Issues](https://img.shields.io/badge/Deficiencies-View_Known_Issues-red)](known_issues.md)
+
+## Status Legend
+- ✅ **Documented**: Verified with live sandbox data. Structure and examples are confirmed.
+- ❌ **Blocked**: Endpoint exists but consistently returns 404/500/Empty. See [known_issues.md](known_issues.md) for details.
+- 📝 **Planned**: Not yet probed or documented in this cycle.
 
 ## Endpoint Registry
 
-Explore the documented and planned endpoints below. Categories are grouped by their primary function.
+Explore the documented endpoints below. Click a category to expand its list of endpoints.
 
 <details markdown="1">
-<summary><b>Category Endpoints (67%)</b></summary>
+<summary><b>📂 Category Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -20,7 +26,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Event Endpoints (100%)</b></summary>
+<summary><b>📂 Event Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -32,7 +38,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Location Endpoints (100%)</b></summary>
+<summary><b>📂 Location Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -42,7 +48,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Order & Cart Endpoints (100%)</b></summary>
+<summary><b>📂 Order & Cart Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -57,7 +63,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Product Endpoints (83%)</b></summary>
+<summary><b>📂 Product Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -71,7 +77,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Venue & VenueGroup Endpoints (100%)</b></summary>
+<summary><b>📂 Venue & VenueGroup Endpoints</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -84,38 +90,30 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Other Endpoints (Seat, User, Report, etc.) (86%)</b></summary>
+<summary><b>📂 Other Endpoints (Seat, User, Report, etc.)</b></summary>
 
 | Category | Method | Endpoint | Status |
 | :--- | :--- | :--- | :--- |
 | **Seat** | GET | [`v2/venues/{venueId}/events/{eventId}/sections`](endpoints/venue_sections.md) | ✅ Documented |
 | **User** | GET | [`v4/venues/{venueId}/users/pin/{pin}`](endpoints/user_by_pin.md) | ✅ Documented |
 | **Report** | GET | [`v1/venues/{venueId}/reports/{reportType}/{fromDate}/{toDate}`](endpoints/reports_v1.md) | ✅ Documented |
-| **Error** | POST | [`v2/venues/{venueId}/error`](endpoints/PLANNED.md) | 📝 Planned |
+| **Error** | POST | [`v2/venues/{venueId}/error`](endpoints/venue_error_log.md) | ✅ Documented |
 | **Print** | GET | [`v3/venues/{venueId}/locations/{locationId}/print`](endpoints/location_print_queue.md) | ✅ Documented |
 | **Tab** | GET | [`v2/venues/{venueId}/tabs/unprinted`](endpoints/tabs_unprinted.md) | ✅ Documented |
 | **Tab2** | GET | [`v4/venues/{venueId}/tabs/{tabId}`](endpoints/tab_details_v4.md) | ✅ Documented |
 
 </details>
 
-## Known Deficiencies & Limitations
+## Agentic Usage
 
-The following endpoints are currently documented but known to return errors or empty responses in the sandbox environment:
+This repository includes a specialized guide for AI agents tasked with developing applications that consume the Tapin2 API:
 
-- **v1/venues/{venueId}/reports**: Returns `500 Internal Server Error`. This legacy reporting system appears to be deprecated in favor of the Management Console's export features.
-- **v2/venues/{venueId}/tabs/unprinted**: Returns `404 Not Found`. Unprinted activity is likely handled via the standard order fulfillment endpoints.
-- **v2/venuegroups/{groupId}/venueids**: Returns `404 Not Found`. This endpoint may require specific venue group permissions or is inactive in the sandbox.
-- **v2/venues/{venueId}/orders/unprinted**: Returns `[]` unless active, unprinted orders exist in the current event context.
-- **Suite-based Event Data**: Current event calls for suite-based venues frequently return `null` outside of specific preorder windows.
-- **Translations (`v2/venues/{venueId}/translations`)**: Currently returns an empty object `{}` for all tested venues. The mechanism for populating these strings is currently unverified.
-- **POST {version}/Category**: Returns `500 Internal Server Error` with `System.NullReferenceException` in `SubmitIntegrationsAsync`. This appears to be a backend failure when synchronizing with POS integrations in the sandbox environment.
-- **Cart Management (`v2/cart/*`)**: `add`, `remove`, and `updatequantity` endpoints consistently return `500 Internal Server Error` (`ArgumentNullException`) during the `OrderingCutOff` validation phase, even when provided with valid `eventId` and `locationId` contexts from active orders.
-- **Timestamp Discrepancies**: The API exhibits inconsistent timezone behavior. Event-related endpoints (`v2/events/*`) typically return localized venue time (PST), while Order-related endpoints (`v2/venues/{id}/orders/*`) return timestamps in **UTC**.
+- [🤖 API Usage Guide for Agents (USAGE_AGENTS.md)](USAGE_AGENTS.md): Critical technical constraints, timezone rules, and model references for API integration.
 
 ## Project Context
 
 - [METHODOLOGY.md](METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
-
+- [known_issues.md](known_issues.md): In-depth look at non-functional endpoints and behavioral caveats.
 - [CHANGELOG.md](CHANGELOG.md): A log of all updates to this documentation.
 
 ### Key Venue Types

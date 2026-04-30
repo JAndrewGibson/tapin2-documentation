@@ -81,4 +81,6 @@ Returns an array of location-product mapping objects.
 - **Fulfillment**: The `fulfillmentGroup` is used by the Tapin2 printer and KDS (Kitchen Display System) to route items correctly.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-locations-locationId-products)
+
 [← Back to Endpoint Registry](../README.md)

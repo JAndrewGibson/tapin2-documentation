@@ -13,4 +13,6 @@ This endpoint currently returns a `500 Internal Server Error` in the sandbox env
 Users seeking report data should typically use the Management Console export features or inquire about the V2 reporting API availability.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v1-venues-venueId-reports-reportType-fromDate-toDate)
+
 [← Back to Endpoint Registry](../README.md)

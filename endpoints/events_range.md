@@ -29,7 +29,7 @@ Returns an array of event objects. The structure is identical to the [Current Ev
 | `isLastCall` | Boolean | Whether the event is currently in the "Last Call" period. |
 | `isCurrent` | Boolean | Whether this is the active/live event at the venue. |
 | `taxExempt` | Boolean | Whether sales for this event are tax-exempt. |
-| `eventType` | Object | Category/Pricing configuration for the event. |
+| `eventType` | [Object](../models/event_type.md) | Category/Pricing configuration for the event. |
 
 ## Example Response (Sanitized)
 
@@ -52,4 +52,6 @@ Returns an array of event objects. The structure is identical to the [Current Ev
 - **Preorder Windows**: For suite-based venues, this endpoint is often used to show customers a calendar of upcoming games for advanced ordering.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-events-minDate-maxDate)
+
 [← Back to Endpoint Registry](../README.md)

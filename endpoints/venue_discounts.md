@@ -56,4 +56,6 @@ Returns an array of discount objects.
 - **Product Specificity**: Some discounts are restricted to specific items (e.g., "Buy a burger, get a discount"). These will have `isProductSpecific: true`.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-discounts)
+
 [← Back to Endpoint Registry](../README.md)

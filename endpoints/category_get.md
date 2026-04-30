@@ -13,4 +13,6 @@ Probing `v2/Category` returns a `401 Unauthorized` error with standard venue API
 For venue-specific categories, use [v2/venues/{venueId}/locations/{locationId}/categories](categories.md) instead.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-version-Category)
+
 [← Back to Endpoint Registry](../README.md)

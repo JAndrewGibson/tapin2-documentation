@@ -39,7 +39,7 @@ Contains the details of an individual order within the tab.
 | `id` | Integer | Unique identifier for the order. |
 | `status` | Integer | Order status (e.g., 1=Pending, 2=Fulfilled). |
 | `totalGross` | Float | The total amount for this specific order. |
-| `items` | Array | List of product items included in this order. |
+| `items` | [Array](../models/item.md) | List of product items included in this order. |
 
 ## Example Response (Sanitized)
 
@@ -86,4 +86,6 @@ Contains the details of an individual order within the tab.
 - **Payments**: A tab can have multiple partial payments or "Split Checks" represented in the `payments` array.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v4-venues-venueId-tabs-tabId)
+
 [← Back to Endpoint Registry](../README.md)

@@ -9,7 +9,31 @@ Retrieve the currently active event for a venue. This is used to determine which
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- |
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +41,25 @@ Retrieve the currently active event for a venue. This is used to determine which
 Returns an event object if an event is currently active, or `null` if no event is scheduled for the current time.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- |
 | `id` | Integer | Unique identifier for the event. |
 | `title` | String | Public name of the event. |
 | `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |
@@ -27,12 +69,30 @@ Returns an event object if an event is currently active, or `null` if no event i
 | `isLastCall` | Boolean | Whether the event is currently in the "Last Call" period. |
 | `isCurrent` | Boolean | Whether this is the active/live event at the venue. |
 | `taxExempt` | Boolean | Whether sales for this event are tax-exempt. |
-| `eventType` | Object | Category/Pricing configuration for the event. |
+| `eventType` | [Object](../models/event_type.md) | Category/Pricing configuration for the event. |
 
 ### Event Type Object
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- | :
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
+--- |
 | `id` | Integer | ID of the event type. |
 | `title` | String | Category name (e.g., "Standard Game", "Concert"). |
 | `priceLevelId` | Integer | The price level mapping used for products during this event. |
@@ -62,5 +122,13 @@ Returns an event object if an event is currently active, or `null` if no event i
 - **Suite-based Venues**: May return `null` more frequently if events are restricted to specific preorder windows.
 - **Concessions-based Venues**: Generally returns the active game or concert currently in progress.
 
+
+## Related Endpoints
+
+- [Event Details](event_details.md)
+- [Get Products by Event](products_event.md)
+
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-events-current)
+
 [← Back to Endpoint Registry](../README.md)

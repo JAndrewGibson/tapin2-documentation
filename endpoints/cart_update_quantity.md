@@ -20,4 +20,6 @@ Update the quantity of an existing item in the shopping cart.
 | `quantity` | Integer | **Required**. The new quantity for the item. |
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/POST-v2-cart-updatequantity)
+
 [← Back to Endpoint Registry](../README.md)

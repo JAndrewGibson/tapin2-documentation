@@ -71,4 +71,6 @@ Returns an array of location objects.
 - **Concessions-based Venues**: Locations represent physical stands. `isPickup` is the primary service method. Closed locations will often have `isActive: false` or specific text in the `title`.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-locations)
+
 [← Back to Endpoint Registry](../README.md)

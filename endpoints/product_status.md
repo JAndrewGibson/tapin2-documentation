@@ -32,4 +32,6 @@ true
 - **Real-time Availability**: This is a lightweight alternative to fetching the full inventory or product list when only a single item's status is needed.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v2-venues-venueId-products-productId-status)
+
 [← Back to Endpoint Registry](../README.md)

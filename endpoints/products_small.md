@@ -82,4 +82,6 @@ Returns an array of compact product objects.
 - **Missing Data**: This endpoint does not include `productGroups` (Packages) or full image URLs. It is primarily for simple concessions ordering.
 
 ---
+[🔗 View Original Documentation](https://api.tapin2.co/Help/Api/GET-v4-venues-venueId-locations-locationId-products-small)
+
 [← Back to Endpoint Registry](../README.md)
