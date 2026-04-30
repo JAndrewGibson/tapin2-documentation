@@ -11,7 +11,9 @@ All notable changes to this documentation project will be noted here.
 - Updated `v2/venues/{venueId}/orders/unprinted` documentation with verified response structure and timezone notes.
 - Documented `v2/cart/add`, `remove`, and `updatequantity` endpoints (marked as Blocked).
 - Identified inconsistent timezone behavior (GET Events uses Local, Orders uses UTC).
-- Updated Event category to 100% completion in registry.
+- Documented `GET v4/venues/{venueId}/events/{eventId}/orders/small`.
+- Documented `POST v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`.
+- Updated Order & Cart category to 100% completion in registry.
 
 ## [1.0.0] - 2026-04-29
 ### Added

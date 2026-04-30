@@ -2,7 +2,7 @@
 
 I am systematically probing the Tapin2 API to verify responses against live sandbox data. If you have experience with this endpoint or have sample JSON responses (sanitized), please feel free to contribute to this documentation.
 
-![Progress](https://img.shields.io/badge/Documentation_Progress-82%25-blue)
+![Progress](https://img.shields.io/badge/Documentation_Progress-88%25-blue)
 
 ## Endpoint Registry
 
@@ -42,7 +42,7 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Order & Cart Endpoints (71%)</b></summary>
+<summary><b>Order & Cart Endpoints (100%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
@@ -51,8 +51,8 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 | POST | [`v2/cart/add`](endpoints/cart_add.md) | ❌ Blocked (500 Error) |
 | POST | [`v2/cart/remove`](endpoints/cart_remove.md) | ❌ Blocked (500 Error) |
 | POST | [`v2/cart/updatequantity`](endpoints/cart_update_quantity.md) | ❌ Blocked (500 Error) |
-| GET | [`v4/venues/{venueId}/events/{eventId}/orders/small`](endpoints/PLANNED.md) | 📝 Planned |
-| POST | [`v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`](endpoints/PLANNED.md) | 📝 Planned |
+| GET | [`v4/venues/{venueId}/events/{eventId}/orders/small`](endpoints/orders_small.md) | ✅ Documented |
+| POST | [`v4/venues/{venueId}/orders/{orderId}/items/{itemId}/bump`](endpoints/order_item_bump.md) | ✅ Documented |
 
 </details>
 
