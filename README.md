@@ -110,13 +110,13 @@ Explore the documented endpoints below. Click a category to expand its list of e
 
 This repository includes a specialized guide for AI agents tasked with developing applications that consume the Tapin2 API:
 
-- [🤖 API Usage Guide for Agents (USAGE_AGENTS.md)](extra-documents/USAGE_AGENTS.md): Critical technical constraints, timezone rules, and model references for API integration.
+- [🤖 API Usage Guide for Agents](extra-documents/USAGE_AGENTS.md): Critical technical constraints, timezone rules, and model references for API integration.
 
 ## Project Context
 
-- [METHODOLOGY.md](extra-documents/METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
-- [known-issues.md](extra-documents/known-issues.md): In-depth look at non-functional endpoints and behavioral caveats.
-- [CHANGELOG.md](extra-documents/CHANGELOG.md): A log of all updates to this documentation.
+- [METHODOLOGY](extra-documents/METHODOLOGY.md): Detailed explanation of my API verification and documentation process.
+- [KNOWN ISSUES](extra-documents/known-issues.md): In-depth look at non-functional endpoints and behavioral caveats.
+- [CHANGELOG](extra-documents/CHANGELOG.md): A log of all updates to this documentation.
 
 ### Key Venue Types
 - **Suites**: Suite-based service including tabs and packages.
