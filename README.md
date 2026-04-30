@@ -20,12 +20,12 @@ Explore the documented and planned endpoints below. Categories are grouped by th
 </details>
 
 <details markdown="1">
-<summary><b>Event Endpoints (75%)</b></summary>
+<summary><b>Event Endpoints (100%)</b></summary>
 
 | Method | Endpoint | Status |
 | :--- | :--- | :--- |
 | GET | [`v2/venues/{venueId}/events/{minDate}/{maxDate}`](endpoints/events_range.md) | ✅ Documented |
-| POST | [`v2/events/{minDate}/{maxDate}`](endpoints/PLANNED.md) | 📝 Planned |
+| POST | [`v2/events/{minDate}/{maxDate}`](endpoints/events_search_post.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/events/current`](endpoints/events_current.md) | ✅ Documented |
 | GET | [`v2/venues/{venueId}/events/{eventId}`](endpoints/event_details.md) | ✅ Documented |
 

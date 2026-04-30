@@ -39,15 +39,15 @@ The error occurs during the `SubmitIntegrationsAsync` phase of the request, sugg
 
 ## Verification Log (Attempts)
 
-The following payload variations were tested against `v2/Category` for Venue `1408` (Suites) and `451` (Concessions):
+The following payload variations were tested against `v2/Category` for **Venue A** (Suites) and **Venue B** (Concessions):
 
 | Attempt | Payload Strategy | Result | Note |
 | :--- | :--- | :--- | :--- |
-| 1 | `{"venueId": 1408, "title": "TEST", "isActive": true}` | `500` | Standard camelCase minimal |
-| 2 | `{"VenueId": 1408, "Title": "TEST", "IsActive": true}` | `500` | PascalCase minimal |
+| 1 | `{"venueId": VENUE_ID_A, "title": "TEST", "isActive": true}` | `500` | Standard camelCase minimal |
+| 2 | `{"VenueId": VENUE_ID_A, "Title": "TEST", "IsActive": true}` | `500` | PascalCase minimal |
 | 3 | Full object with `ImageUrl`, `OrderId`, `PosRefId`, etc. | `500` | Matching GET response structure |
-| 4 | Including `LocationId`: `12027` | `500` | Attempting to provide location context |
-| 5 | Including `EventId`: `149088` | `500` | Attempting to provide event context |
+| 4 | Including `LocationId`: `LOC_ID_1` | `500` | Attempting to provide location context |
+| 5 | Including `EventId`: `EVENT_ID_1` | `500` | Attempting to provide event context |
 | 6 | Wrapped object: `{"Category": {...}}` | `401` | Required fields not at top level |
 | 7 | Array of objects: `[{...}]` | `401` | Endpoint does not accept bulk POST |
 
