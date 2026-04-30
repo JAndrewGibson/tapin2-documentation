@@ -7,7 +7,7 @@ I am systematically probing the Tapin2 API to verify responses against live sand
 
 ## Status Legend
 - ✅ **Documented**: Verified with live sandbox data. Structure and examples are confirmed.
-- ❌ **Blocked**: Endpoint exists but consistently returns 404/500/Empty. See [known-issues.md](extra-documents/known-issues.md) for details.
+- ❌ **Blocked**: Endpoint exists but consistently returns 404/500/Empty. See the [Known Issues](extra-documents/known-issues.md) for details.
 - 📝 **Planned**: Not yet probed or documented in this cycle.
 
 ## Endpoint Registry

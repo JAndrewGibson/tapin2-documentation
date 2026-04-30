@@ -21,7 +21,7 @@ These endpoints consistently return a `500 Internal Server Error` despite provid
 
 A major discrepancy exists between how different controllers handle date and time:
 
-*   **Event-related Endpoints** (`v2/events/*`, `v2/venues/{id}/events/*`): Return timestamps in **Local Venue Time** (e.g., Pacific Standard Time for the Honda Center).
+*   **Event-related Endpoints** (`v2/events/*`, `v2/venues/{id}/events/*`): Return timestamps in **Local Venue Time** (e.g., Pacific Standard Time).
 *   **Order-related Endpoints** (`v2/venues/{id}/orders/*`, `v2/venues/{id}/orders/unprinted`): Return timestamps in **UTC**.
 *   **Recommendation**: Developers must check the `venue.timeZoneInfo` object returned in order responses to properly localize timestamps for end-users.
 

@@ -15,9 +15,9 @@ The `Venue` object contains top-level configuration and metadata for a physical 
 ## Example JSON
 ```json
 {
-    "id": 451,
-    "title": "Honda Center - Concessions",
-    "displayName": "Honda Center",
+    "id": 5843,
+    "title": "Example Venue",
+    "displayName": "Example Venue",
     "taxRate": 7.75,
     "isCashless": true
 }

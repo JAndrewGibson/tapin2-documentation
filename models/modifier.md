@@ -13,7 +13,7 @@ The `Modifier` object represents an adjustment or option selected for a specific
 ```json
 {
     "id": 1833730,
-    "title": "MAKE IT A MICHELADA",
+    "title": "MICHELADA UPGRADE",
     "priceDiff": 7.0,
     "quantity": 1
 }

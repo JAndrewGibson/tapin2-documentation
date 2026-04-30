@@ -66,7 +66,7 @@ Returns an array of "small" order objects.
 [
     {
         "id": 57036979,
-        "venueId": 451,
+        "venueId": 5843,
         "venueName": "Example Venue",
         "eventId": 188841,
         "eventName": "EXAMPLE_EVENT",
@@ -89,7 +89,7 @@ Returns an array of "small" order objects.
                 "modifiers": [
                     {
                         "id": 1833730,
-                        "title": "MAKE IT A MICHELADA",
+                        "title": "MICHELADA UPGRADE",
                         "priceDiff": 7.0,
                         "quantity": 1
                     }

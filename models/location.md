@@ -14,7 +14,7 @@ The `Location` object represents a specific point of sale or service area (e.g.,
 ```json
 {
     "id": 11829,
-    "title": "224 TEQUILA HERRADURA BAR",
+    "title": "Section 258 Bar",
     "type": 2,
     "isAvailable": true
 }
