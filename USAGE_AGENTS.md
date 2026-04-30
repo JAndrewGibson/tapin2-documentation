@@ -1,8 +1,3 @@
----
-layout: default
-title: API Usage Guide for Agents
----
-
 # Tapin2 API Usage Guide for AI Agents
 
 This document provides essential context and technical constraints for AI agents tasked with integrating or interacting with the Tapin2 API.

@@ -1,7 +1,3 @@
----
-layout: default
-title: Tapin2 API Documentation
----
 
 # Tapin2 API Documentation
 
