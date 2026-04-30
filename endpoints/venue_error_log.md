@@ -9,13 +9,13 @@ Report client-side errors, stack traces, and application state to the Tapin2 log
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Request Body
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `message` | String | **Required**. The error message or description. |
 | `stackTrace` | String | The technical stack trace or error details. |
 | `deviceId` | String | The identifier of the device reporting the error. |

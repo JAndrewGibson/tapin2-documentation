@@ -9,7 +9,7 @@ Retrieve a list of events within a specific date range for a venue.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `minDate` | String | Path | Start of the date range (`YYYY-MM-DD`). |
 | `maxDate` | String | Path | End of the date range (`YYYY-MM-DD`). |
@@ -19,7 +19,7 @@ Retrieve a list of events within a specific date range for a venue.
 Returns an array of event objects. The structure is identical to the [Current Event](events_current.md) endpoint.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the event. |
 | `title` | String | Public name of the event. |
 | `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |

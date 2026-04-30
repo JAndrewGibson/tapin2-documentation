@@ -9,7 +9,7 @@ Retrieve a compact list of orders for a specific event. This endpoint provides f
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `eventId` | Integer | Path | The unique identifier for the event. |
 
@@ -18,7 +18,7 @@ Retrieve a compact list of orders for a specific event. This endpoint provides f
 Returns an array of "small" order objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the order. |
 | `venueId` | Integer | The venue ID. |
 | `venueName` | String | Display name of the venue. |
@@ -39,7 +39,7 @@ Returns an array of "small" order objects.
 ### Small Item Object
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the line item. |
 | `location` | String | Name of the location where the item was served. |
 | `productId` | Integer | ID of the product. |
@@ -53,7 +53,7 @@ Returns an array of "small" order objects.
 ### Modifier Object
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the modifier. |
 | `title` | String | Display name of the modifier. |
 | `priceDiff` | Float | The price adjustment applied by this modifier. |

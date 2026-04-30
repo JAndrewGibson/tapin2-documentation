@@ -9,7 +9,7 @@ Retrieve user profile and permission data by providing a unique PIN.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `pin` | String | Path | The unique alphanumeric or numeric PIN for the user. |
 
@@ -18,7 +18,7 @@ Retrieve user profile and permission data by providing a unique PIN.
 Returns a user profile object.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the user. |
 | `name` | String | Display name of the user. |
 | `locationId` | Integer | (Optional) The specific location the user is assigned to. |

@@ -9,7 +9,7 @@ Retrieve real-time inventory and stock levels for all products in a venue.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +17,7 @@ Retrieve real-time inventory and stock levels for all products in a venue.
 Returns an array of inventory objects. Each object contains the product metadata and its current stock status.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the inventory record. |
 | `productId` | Integer | ID of the associated product. |
 | `product` | Object | Full product configuration details (see [products_venue.md](products_venue.md) for schema). |

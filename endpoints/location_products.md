@@ -9,7 +9,7 @@ Retrieve all products associated with a specific location, including category an
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `locationId` | Integer | Path | The unique identifier for the location. |
 
@@ -18,7 +18,7 @@ Retrieve all products associated with a specific location, including category an
 Returns an array of location-product mapping objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `product` | Object | Full product configuration (see [products_venue.md](products_venue.md)). |
 | `productId` | Integer | Unique identifier for the product. |
 | `location` | Object | Details of the assigned location. |
@@ -35,7 +35,7 @@ Returns an array of location-product mapping objects.
 ### Category Object
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | ID of the category. |
 | `title` | String | Name of the category (e.g., "Beer", "Snacks"). |
 

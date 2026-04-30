@@ -9,35 +9,7 @@ Retrieve detailed metadata for a specific event by its ID.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- | :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- | :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- | :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `eventId` | Integer | Path | The unique identifier for the event. |
 
@@ -46,28 +18,7 @@ Retrieve detailed metadata for a specific event by its ID.
 Returns a single event object. The structure is identical to the [Current Event](events_current.md) endpoint.
 
 | Field | Type | Description |
-| :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- | :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- | :
-## Related Endpoints
-
-- [Current Event](events_current.md)
-- [Events Range](events_range.md)
-- [Get Products by Event](products_event.md)
-
---- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the event. |
 | `title` | String | Public name of the event. |
 | `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |
@@ -103,6 +54,7 @@ Returns a single event object. The structure is identical to the [Current Event]
 
 - **Price Levels**: The `priceLevelId` within the `eventType` object is critical for correctly calculating product prices for this specific event.
 - **Reporting**: The `includeInReports` field indicates if orders from this event should be included in financial exports.
+
 
 
 ## Related Endpoints

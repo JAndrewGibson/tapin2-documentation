@@ -9,7 +9,7 @@ Retrieve a list of service locations, with an option to include locations config
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `includePreorder` | Boolean | Query | If `true`, includes locations specifically designated for preorder workflows. |
 
@@ -18,7 +18,7 @@ Retrieve a list of service locations, with an option to include locations config
 Returns an array of location objects. This structure is identical to the [Venue Locations](venue_locations.md) endpoint.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the location. |
 | `title` | String | Name of the location. |
 | `description`| String | Detailed description of the location. |

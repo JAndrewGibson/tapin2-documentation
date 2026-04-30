@@ -13,7 +13,7 @@ Add a product to the user's shopping cart.
 ## Expected Request Body
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `venueId` | Integer | **Required**. Unique identifier for the venue. |
 | `locationId` | Integer | **Required**. Service location for the order. |
 | `eventId` | Integer | **Required**. Active event ID. |
@@ -26,7 +26,7 @@ Add a product to the user's shopping cart.
 The following variations were tested at **Venue B** (Concessions) using active event `EVENT_ID_1` and valid location/product combinations:
 
 | Attempt | Payload Strategy | Result | Note |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | 1 | `{"venueId", "locationId", "productId", "quantity"}` | `500` | Missing `eventId` (KeyNotFoundException) |
 | 2 | Including `eventId` | `500` | ArgumentNullException in `OrderingCutOff` |
 | 3 | Including `items` array | `500` | Same `OrderingCutOff` failure |

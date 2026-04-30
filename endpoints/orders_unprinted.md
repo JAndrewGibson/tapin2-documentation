@@ -9,31 +9,7 @@ Retrieve a list of orders that have been placed but not yet printed or fulfilled
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -41,25 +17,7 @@ Retrieve a list of orders that have been placed but not yet printed or fulfilled
 Returns an array of complex order objects.
 
 | Field | Type | Description |
-| :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the order. |
 | `idLast3` | String | Last 3 digits of the order ID (often used as a display number). |
 | `venueId` | Integer | The venue where the order was placed. |
@@ -78,25 +36,7 @@ Returns an array of complex order objects.
 ### Item Object Structure
 
 | Field | Type | Description |
-| :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- | :
-## Related Endpoints
-
-- [Order Item Bump](order_item_bump.md)
-- [Orders (Small)](orders_small.md)
-
---- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the line item. |
 | `quantity` | Integer | Number of units purchased. |
 | `pricePer` | Float | Price per unit. |
@@ -147,6 +87,7 @@ Returns an array of complex order objects.
 - **Timezones**: Unlike the Events endpoints which return local venue time, the Order endpoints typically return timestamps in **UTC**. Developers should localize these based on the `venue.timeZoneInfo` provided in the response.
 - **Empty State**: If no unprinted orders exist, the endpoint returns an empty array `[]`.
 - **Fulfillment**: Once an order is marked as "Printed" or "Fulfilled" in the system, it will no longer appear in this list.
+
 
 
 ## Related Endpoints

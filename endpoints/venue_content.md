@@ -9,7 +9,7 @@ Retrieve CMS-driven content and UI duration settings for a specific location wit
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `locationId` | Integer | Query | The unique identifier for the location (e.g., a specific suite or stand). |
 
@@ -18,7 +18,7 @@ Retrieve CMS-driven content and UI duration settings for a specific location wit
 Returns an object containing metadata and content configuration.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `{slug}` | Object | A content entry identified by a unique slug or numeric ID. |
 | `{slug}.{locale}` | String | The localized content string or HTML snippet. |
 | `idleTimeUntilWarning` | Integer | Time (in seconds) before an idle warning is shown on terminal/kiosk. |

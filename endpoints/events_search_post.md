@@ -9,14 +9,14 @@ Search for events within a specific date range for a venue. This endpoint provid
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `minDate` | String | Path | Start of the date range (`YYYY-MM-DD`). |
 | `maxDate` | String | Path | End of the date range (`YYYY-MM-DD`). |
 
 ## Request Body
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `venueId` | Integer | **Required**. The unique identifier for the venue. |
 
 ## Response Structure
@@ -24,7 +24,7 @@ Search for events within a specific date range for a venue. This endpoint provid
 Returns an array of event objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the event. |
 | `title` | String | Public name of the event. |
 | `startDate` | String | Scheduled start time (format: `MM/DD/YYYY H:MM AM/PM`). |

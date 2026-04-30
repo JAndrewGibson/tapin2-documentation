@@ -9,7 +9,7 @@ Retrieve a lightweight list of products for a specific location, optimized for m
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `locationId` | Integer | Path | The unique identifier for the location. |
 
@@ -18,7 +18,7 @@ Retrieve a lightweight list of products for a specific location, optimized for m
 Returns an array of compact product objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the product. |
 | `title` | String | Public name of the product. |
 | `fgId` | Integer | Fulfillment Group ID (e.g., KITCHEN=1, BAR=2). |
@@ -32,7 +32,7 @@ Returns an array of compact product objects.
 ### Compact Modifier Group
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | ID of the modifier group. |
 | `title` | String | Name of the group (e.g., "Size", "Add-ons"). |
 | `mods` | Array | List of compact modifier objects. |
@@ -40,7 +40,7 @@ Returns an array of compact product objects.
 ### Compact Modifier
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | ID of the modifier. |
 | `title` | String | Name of the modifier (e.g., "Large"). |
 | `priceDiff` | Float | Price adjustment for selecting this modifier. |

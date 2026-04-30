@@ -9,7 +9,7 @@ Retrieve a list of all service locations (stands, suites, carts) within a venue.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +17,7 @@ Retrieve a list of all service locations (stands, suites, carts) within a venue.
 Returns an array of location objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the location. |
 | `title` | String | Name of the location (e.g., "Main Grill", "Suite 101"). |
 | `description`| String | Detailed description of the location. |

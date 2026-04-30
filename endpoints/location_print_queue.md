@@ -9,7 +9,7 @@ Retrieve a list of pending print jobs for a specific location.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `locationId` | Integer | Path | The unique identifier for the location. |
 

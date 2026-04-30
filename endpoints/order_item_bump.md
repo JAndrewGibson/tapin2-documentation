@@ -9,7 +9,7 @@ Mark an order item as fulfilled or progress it through the Kitchen Display Syste
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `orderId` | Integer | Path | The unique identifier for the order. |
 | `itemId` | Integer | Path | The unique identifier for the specific line item within the order. |

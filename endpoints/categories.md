@@ -9,7 +9,7 @@ Retrieve all product categories available at a specific location.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `locationId` | Integer | Path | The unique identifier for the location. |
 
@@ -18,7 +18,7 @@ Retrieve all product categories available at a specific location.
 Returns an array of category objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the category. |
 | `title` | String | Name of the category (e.g., "BEER", "FOOD"). |
 | `imageUrl` | String | URL for the category icon or image. |

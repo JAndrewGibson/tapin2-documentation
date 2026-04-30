@@ -1,3 +1,8 @@
+---
+layout: default
+title: Methodology
+---
+
 # Methodology
 
 This document outlines the testing and verification process used to ensure the accuracy of the Tapin2 API documentation. Given that the official documentation is frequently incomplete or incorrect, I rely on a systematic exploratory approach.

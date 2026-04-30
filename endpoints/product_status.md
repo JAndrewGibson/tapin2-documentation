@@ -9,7 +9,7 @@ Check the current availability status of a specific product.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `productId` | Integer | Path | The unique identifier for the product. |
 
@@ -18,7 +18,7 @@ Check the current availability status of a specific product.
 Returns a raw Boolean value.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `[result]` | Boolean | `true` if the product is active and available; `false` otherwise. |
 
 ## Example Response

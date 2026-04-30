@@ -9,7 +9,7 @@ Retrieve localization and translation strings for the venue's user interface.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure

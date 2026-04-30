@@ -1,8 +1,13 @@
+---
+layout: default
+title: Known Issues & API Caveats
+---
+
 # Known Issues & API Caveats
 
 This document catalogs all non-functional endpoints, behavioral inconsistencies, and architectural caveats identified during the systematic probing of the Tapin2 API in the sandbox environment.
 
-> [!IMPORTANT]
+> **IMPORTANT:**
 > **Source of Truth**: These findings are based on live API responses verified using the methodology described in [METHODOLOGY.md](METHODOLOGY.md). Successfully resolving these issues will likely require direct coordination with **Tapin2 Support** ([support@tapin2.co](mailto:support@tapin2.co)).
 
 ## 1. Blocked & Non-Functional Endpoints (500 Error)

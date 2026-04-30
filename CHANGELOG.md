@@ -1,3 +1,8 @@
+---
+layout: default
+title: Changelog
+---
+
 # Changelog
 
 All notable changes to this documentation project will be noted here.

@@ -13,7 +13,7 @@ Update the quantity of an existing item in the shopping cart.
 ## Expected Request Body
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `venueId` | Integer | **Required**. Unique identifier for the venue. |
 | `locationId` | Integer | **Required**. Service location for the order. |
 | `cartItemId` | Integer | **Required**. The unique ID of the line item in the cart. |

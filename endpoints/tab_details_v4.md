@@ -9,7 +9,7 @@ Retrieve the full state of a specific customer tab, including all associated ord
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `tabId` | Integer | Path | The unique identifier for the tab. |
 
@@ -18,7 +18,7 @@ Retrieve the full state of a specific customer tab, including all associated ord
 Returns a comprehensive tab object.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the tab. |
 | `venueId` | Integer | ID of the venue. |
 | `locationId` | Integer | ID of the location where the tab was opened. |
@@ -35,7 +35,7 @@ Returns a comprehensive tab object.
 Contains the details of an individual order within the tab.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the order. |
 | `status` | Integer | Order status (e.g., 1=Pending, 2=Fulfilled). |
 | `totalGross` | Float | The total amount for this specific order. |

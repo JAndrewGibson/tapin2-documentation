@@ -9,7 +9,7 @@ Retrieve a list of seating sections and their groups for a specific event.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 | `eventId` | Integer | Path | The unique identifier for the event. |
 
@@ -18,7 +18,7 @@ Retrieve a list of seating sections and their groups for a specific event.
 Returns an array of section objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the section. |
 | `title` | String | Name of the section (e.g., "101", "305"). |
 | `group` | Object | The seating group this section belongs to. |
@@ -28,7 +28,7 @@ Returns an array of section objects.
 ### Seating Group Object
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | ID of the seating group. |
 | `title` | String | Name of the group (e.g., "Lower Bowl", "Club Seats"). |
 

@@ -1,3 +1,8 @@
+---
+layout: default
+title: Tapin2 API Documentation
+---
+
 # Tapin2 API Documentation
 
 I am systematically probing the Tapin2 API to verify responses against live sandbox data. This project tracks the verification status of all major endpoints and identifies known deficiencies in the sandbox environment.

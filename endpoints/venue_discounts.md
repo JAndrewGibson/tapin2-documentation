@@ -9,7 +9,7 @@ Retrieve all promotional discounts and manager overrides configured for a venue.
 ## Parameters
 
 | Name | Type | Located In | Description |
-| :--- | :--- | :--- | :--- |
+| :---| :---| :---| :---|
 | `venueId` | Integer | Path | The unique identifier for the venue. |
 
 ## Response Structure
@@ -17,7 +17,7 @@ Retrieve all promotional discounts and manager overrides configured for a venue.
 Returns an array of discount objects.
 
 | Field | Type | Description |
-| :--- | :--- | :--- |
+| :---| :---| :---|
 | `id` | Integer | Unique identifier for the discount. |
 | `title` | String | Public name of the discount. |
 | `code` | String | The alphanumeric promo code (if applicable). |
