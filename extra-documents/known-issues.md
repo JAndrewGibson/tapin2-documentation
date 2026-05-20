@@ -16,6 +16,16 @@ These endpoints consistently return a `500 Internal Server Error` despite provid
 | [`v2/cart/remove`](../endpoints/cart_remove.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
 | [`v2/cart/updatequantity`](../endpoints/cart_update_quantity.md) | POST | Shares backend controller logic with the `add` endpoint and exhibits identical failure behavior. |
 | [`v1/venues/{venueId}/reports/*`](../endpoints/reports_v1.md) | GET | Returns 500. This legacy reporting system appears to be deprecated in favor of the newer Management Console exports. |
+| [`v2/cart/discount/balance`](../endpoints/cart_discount_balance.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v2/venues/{venueId}/events/{eventId}/seats/{seatId}/categories`](../endpoints/venues_events_seats_categories.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`{version}/Venue`](../endpoints/venue_version.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v3/venues/{venueId}/local/print?eventId={eventId}&locationId={locationId}&orderId={orderId}&tabId={tabId}&printTemplate={printTemplate}`](../endpoints/venues_local_print_v3.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v1/venues/{venueId}/reports/{reportType}/{fromDate}/{fromMins}/{toDate}/{toMins}?addDayToEndOfRange={addDayToEndOfRange}`](../endpoints/venues_reports_v1.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v1/venues/{venueId}/reports/{reportType}/events/{eventId}`](../endpoints/venues_reports_events_v1.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v2/venues/{venueId}/reports/{reportType}/{fromDate}/{toDate}`](../endpoints/venues_reports.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v2/venues/{venueId}/reports/{reportType}/{fromDate}/{fromMins}/{toDate}/{toMins}?addDayToEndOfRange={addDayToEndOfRange}`](../endpoints/venues_reports_2.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`v2/venues/{venueId}/reports/{reportType}/events/{eventId}`](../endpoints/venues_reports_events.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
+| [`yd/venues/{venueId}/orders/modified/{fromDate}/{toDate}`](../endpoints/venues_orders_modified_yd.md) | GET | Returns 500 Internal Server Error in sandbox environment. |
 
 ## 2. Inconsistent Timezone Behavior
 
@@ -34,6 +44,19 @@ These endpoints return `404 Not Found` or empty results, suggesting they are eit
 | [`v2/venues/{venueId}/tabs/unprinted`](../endpoints/tabs_unprinted.md) | GET | Returns 404. All unprinted activity for both concessions and suites appears to be routed through the standard v2 orders endpoint. |
 | [`v2/venuegroups/{groupId}/venueids`](../endpoints/venue_groups.md) | GET | Returns 404. This may require specific Venue Group administrator permissions. |
 | [`v2/venues/{venueId}/translations`](../endpoints/venue_translations.md) | GET | Returns an empty object `{}`. The mechanism for populating and retrieving these strings remains unverified. |
+| [`v2/venues/{venueId}/sections/{sectionId}/locations`](../endpoints/venues_sections_locations.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v1/venues/{venueId}/orders?count={count}`](../endpoints/venues_orders_v1.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v1/venues/{venueId}/orders/{orderId}`](../endpoints/venues_orders_v1_2.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/events/{eventId}/orders/{orderId}/refund?userId={userId}&managerPin={managerPin}`](../endpoints/venues_events_orders_refund.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v4/venues/{venueId}/events/{eventId}/device/{deviceSerial}/orders/small`](../endpoints/venues_events_device_orders_small_v4.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v4/venues/{venueId}/orders/small/phone/{phone}`](../endpoints/venues_orders_small_phone_v4.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/events/{eventId}/seats/{seatId}/categories/{categoryId}/products?dob={dob}`](../endpoints/venues_events_seats_categories_products.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/user/{pin}/products`](../endpoints/venues_user_products.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/global/enums/{enumType}/{asKeyValuePairs}/{nameFirst}`](../endpoints/global_enums.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v3/venues/{venueId}/vendors/{locationId}/print`](../endpoints/venues_vendors_print_v3.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/events/{eventId}/sections/{sectionId}/rows`](../endpoints/venues_events_sections_rows.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/events/{eventId}/sections/{sectionId}/rows/{row}/numbers`](../endpoints/venues_events_sections_rows_numbers.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
+| [`v2/venues/{venueId}/events/{eventId}/seats/{sectionId}/{row}/{seatNumber}`](../endpoints/venues_events_seats.md) | GET | Returns 404 Not Found (endpoint inactive or no data matches query context). |
 
 ## 4. Sandbox Behavioral Caveats
 
@@ -52,6 +75,30 @@ If your integration requires any of the blocked or non-functional endpoints list
 1.  Verify if the endpoint is active for your specific Venue ID.
 2.  Ensure that all necessary POS integrations (e.g., Quest, Bypass) are properly mapped in your sandbox instance.
 3.  Request a specific `DeviceId` or `SessionToken` if required for Cart operations.
+
+## 7. Additional Sandbox Blocked & Administrative Endpoints
+
+These endpoints returned alternative failure codes during sandbox verification, indicating administrative restrictions or method exclusions.
+
+| Endpoint | Method | Observed Behavior |
+| :--- | :--- | :--- |
+| [`{version}/Location`](../endpoints/location_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Order2`](../endpoints/order2_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Order4`](../endpoints/order4_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/OrderItem`](../endpoints/orderitem_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Product`](../endpoints/product_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Product4`](../endpoints/product4_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Report`](../endpoints/report_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/ReportV2`](../endpoints/reportv2_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Tab`](../endpoints/tab_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Tab2`](../endpoints/tab2_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/User`](../endpoints/user_version.md) | GET | Returns 401 Unauthorized (requires advanced or administrative API scope). |
+| [`{version}/Event`](../endpoints/event_version.md) | GET | Returns 405 Method Not Allowed (GET method disabled for version). |
+| [`v2/venues/{venueId}/orders/modified/{fromDate}/{toDate}`](../endpoints/venues_orders_modified.md) | GET | Consistently times out in sandbox (Read Timeout > 15s). |
+| [`v2/venues/{venueId}/orders/modified/{fromDate}/{fromMins}/{toDate}/{toMins}?addDayToEndOfRange={addDayToEndOfRange}`](../endpoints/venues_orders_modified_2.md) | GET | Returns 400 Bad Request (parameters invalid or malformed). |
+| [`v4/venues/{venueId}/orders/small/modified/{fromDate}/{toDate}`](../endpoints/venues_orders_small_modified_v4.md) | GET | Consistently times out in sandbox (Read Timeout > 15s). |
+| [`v4/venues/{venueId}/orders/small/modified/{fromDate}/{fromMins}/{toDate}/{toMins}?addDayToEndOfRange={addDayToEndOfRange}`](../endpoints/venues_orders_small_modified_v4_2.md) | GET | Returns 400 Bad Request (parameters invalid or malformed). |
+| [`{version}/Seat`](../endpoints/seat_version.md) | GET | Returns 405 Method Not Allowed (GET method disabled for version). |
 
 ---
 [← Back to Main Registry](../README.md)

@@ -2,6 +2,15 @@
 
 All notable changes to this documentation project will be noted here.
 
+## [1.2.0] - 2026-05-20
+
+### Added
+- **Missing Endpoints Registry**: Bulk added 151 undocumented endpoints identified from the official Tapin2 API help page.
+  - Created placeholder documentation pages for all missing endpoints in the `endpoints/` directory.
+  - Registered all new endpoints as `📝 Planned` in the main `README.md` registry.
+  - Categorized and linked all endpoints back to their respective original documentation URLs.
+
+
 ## [1.1.0] - 2026-04-30
 
 ### Documentation & Probing
